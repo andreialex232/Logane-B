@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing abstract SCSS files */
+@import 'scss/abstract/functions';
+@import 'scss/abstract/mixins';
+@import 'scss/abstract/variables';
+
+/* Importing base SCSS files */
+@import 'scss/base/animations';
+@import 'scss/base/base';
+@import 'scss/base/typography';
+@import 'scss/base/utilities';
+
+/* Importing components SCSS files */
+
+/* Importing layout SCSS files */
+@import 'scss/layout/navbar';
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
