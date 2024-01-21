@@ -1,0 +1,16 @@
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+
+$btn-padding-x: $button-padding-x;
+$btn-padding-y: $button-padding-y;
+$btn-padding-x-sm: $button-padding-x;
+$btn-padding-y-sm: $button-padding-y;
+$btn-padding-x-lg: $button-padding-x;
+$btn-padding-y-lg: $button-padding-y;
+
+$nav-link-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, background-size 0.3s ease-out, background-position 0s 0.3s ease-in-out;
+
+.btn-secondary:hover {
+  background-color: $secondary !important;
+}

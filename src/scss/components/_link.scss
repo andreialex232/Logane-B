@@ -1,0 +1,7 @@
+.btn-link {
+  @include bgUnderline($secondary);
+
+  &:hover {
+    @include bgUnderlineHover();
+  }
+}
