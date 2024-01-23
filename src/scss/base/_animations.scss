@@ -1,0 +1,110 @@
+// Keyframes =============================================
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+};
+
+@keyframes comeInFromLeft {
+  0% {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+};
+
+@keyframes comeInFromBelow {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+};
+
+@keyframes comeInFromTop {
+  0% {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+};
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+};
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+};
+
+// Animations =============================================
+
+.animated-heading {
+  animation: fadeIn 1.25s ease-in-out;
+}
+
+.animated-text-1 {
+  @include comeInLeftText(.70s);
+}
+
+.animated-text-2 {
+  @include comeInLeftText(1s);
+}
+
+.animated-text-3 {
+  @include comeInLeftText(1.30s);
+}
+
+.animated-cta-heading {
+  visibility: hidden;
+  animation: comeInFromTop .7s cubic-bezier(.24,.49,.38,1.3) 1.50s forwards;
+}
+
+.animated-cta-text {
+  visibility: hidden;
+  animation: comeInFromBelow .7s cubic-bezier(.24,.49,.38,1.3) 1.50s forwards !important;
+}
+
+.animated-cta-menu {
+  visibility: hidden;
+  animation: fadeIn .7s cubic-bezier(.42,0,.58,1) 2s forwards;
+}

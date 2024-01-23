@@ -9,3 +9,12 @@
   background-position: bottom right !important;
   background-size: 100% 3px !important;
 };
+
+@mixin comeInLeftText($seconds) {
+  visibility: hidden;
+  animation: comeInFromLeft;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.42,0,.58,1);
+  animation-fill-mode: forwards;
+  animation-delay: $seconds;
+}
