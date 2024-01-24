@@ -5,6 +5,7 @@ import { FeaturesComponent } from './features/features.component';
 import { HeroComponent } from './hero/hero.component';
 import { ArrowDividerAnimatedComponent } from '../shared/arrow-divider-animated/arrow-divider-animated.component';
 import { ArrowDividerComponent } from '../shared/arrow-divider/arrow-divider.component';
+import { ContactInformationComponent } from './contact-information/contact-information.component';
 
 
 
@@ -12,7 +13,8 @@ import { ArrowDividerComponent } from '../shared/arrow-divider/arrow-divider.com
   declarations: [
     LandingPageComponent,
     FeaturesComponent,
-    HeroComponent
+    HeroComponent,
+    ContactInformationComponent
   ],
   imports: [
     CommonModule,

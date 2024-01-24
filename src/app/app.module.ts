@@ -5,12 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeModule } from './home/home.module';
-import { ContactEmailComponent } from './shared/contact-email/contact-email.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactEmailComponent,
   ],
   imports: [
     BrowserModule,
