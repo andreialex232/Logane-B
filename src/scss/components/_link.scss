@@ -1,5 +1,13 @@
-.btn-link {
+.btn-link-nav {
   @include bgUnderline($secondary);
+
+  &:hover {
+    @include bgUnderlineHover();
+  }
+}
+
+.btn-link-footer {
+  @include bgUnderline($tertiary);
 
   &:hover {
     @include bgUnderlineHover();
