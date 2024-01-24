@@ -6,6 +6,8 @@ import { HeroComponent } from './hero/hero.component';
 import { ArrowDividerAnimatedComponent } from '../shared/arrow-divider-animated/arrow-divider-animated.component';
 import { ArrowDividerComponent } from '../shared/arrow-divider/arrow-divider.component';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
+import { ContactEmailComponent } from '../shared/contact-email/contact-email.component';
+import { ContactTelComponent } from '../shared/contact-tel/contact-tel.component';
 
 
 
@@ -19,7 +21,9 @@ import { ContactInformationComponent } from './contact-information/contact-infor
   imports: [
     CommonModule,
     ArrowDividerAnimatedComponent,
-    ArrowDividerComponent
+    ArrowDividerComponent,
+    ContactEmailComponent,
+    ContactTelComponent
   ]
 })
 export class HomeModule { }
