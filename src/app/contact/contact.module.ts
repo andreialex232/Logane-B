@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
+import { FormComponent } from '../shared/form/form.component';
+import { ContactTelComponent } from '../shared/contact-tel/contact-tel.component';
 
 
 
@@ -9,7 +11,9 @@ import { ContactHomeComponent } from './contact-home/contact-home.component';
     ContactHomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormComponent,
+    ContactTelComponent
   ]
 })
 export class ContactModule { }
