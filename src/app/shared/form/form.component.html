@@ -1,19 +1,53 @@
-<form class="row w-25 d-inline">
+<form [formGroup]="form" class="needs-validation row w-25 d-inline p-2" novalidate id="cform">
   <div class="text-center mb-4">
     <img class="mail-svg-size" src="assets/svg/mail_opened_re_i38e.svg">
     <p class="display-8 u-letter-spacing-1 fw-normal">Raspundem cat se poate de repede</p>
   </div>
-  <div class="mb-4">
-    <input type="text" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-secondary" placeholder="Nume">
+
+  <div class="mb-4 position-relative pb-3 pt-3">
+    <input [ngClass]="{'is-invalid': attemptSubmit && form.get('name')?.errors}" formControlName="name" type="text" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 border-dark" placeholder="Nume">
+    <div class="invalid-feedback position-absolute" *ngIf="attemptSubmit && form.get('name')?.errors">
+      <div *ngIf="attemptSubmit && form.get('name')?.errors!['required']">
+        Campul trebuie completat
+      </div>
+      <div *ngIf="attemptSubmit && form.get('name')?.errors!['pattern']">
+        Campul nu poate contine numere
+      </div>
+    </div>
   </div>
-  <div class="mb-4">
-    <input type="text" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-secondary" placeholder="Email">
+
+  <div class="mb-4 position-relative pb-3 pt-3">
+    <input [ngClass]="{'is-invalid': attemptSubmit && form.get('email')?.errors}" formControlName="email" type="email" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-dark" placeholder="Email">
+    <div class="invalid-feedback position-absolute" *ngIf="attemptSubmit && form.get('email')?.errors">
+      <div *ngIf="attemptSubmit && form.get('email')?.errors!['required']">
+        Campul trebuie completat
+      </div>
+      <div *ngIf="attemptSubmit && form.get('email')?.errors!['email']">
+        Introduceti un email valid
+      </div>
+    </div>
   </div>
-  <div class="mb-4">
-    <input type="tel" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-secondary" placeholder="Numar de telefon">
+
+  <div class="mb-4 position-relative pb-3 pt-3">
+    <input [ngClass]="{'is-invalid': attemptSubmit && form.get('tel')?.errors}" formControlName="tel" type="text" class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-dark" placeholder="Numar de telefon">
+    <div class="invalid-feedback position-absolute" *ngIf="attemptSubmit && form.get('email')?.errors">
+      <div *ngIf="attemptSubmit && form.get('tel')?.errors!['required']">
+        Campul trebuie completat
+      </div>
+      <div *ngIf="attemptSubmit && form.get('tel')?.errors!['pattern']">
+        Campul nu poate contine numere
+      </div>
+    </div>
   </div>
+
   <div class="mb-4">
-    <textarea class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-secondary" rows="3" cols="10" placeholder="Mesaj"></textarea>
+    <textarea class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-dark" rows="3" cols="10" placeholder="Mesaj"></textarea>
   </div>
-  <button class="btn btn-secondary text-bg-primary fw-semibold" type="submit">Trimite</button>
+  
+  <button class="btn btn-secondary text-bg-primary fw-semibold" (click)="submitFrom()" type="submit">Trimite</button>
 </form>
+
+<div>From valid: {{this.form.valid}}</div>
+<div>Name valid: {{this.form.controls['name'].valid}}</div>
+<div>Email valid: {{this.form.controls['email'].valid}}</div>
+<div>Tel valid: {{this.form.controls['tel'].valid}}</div>
