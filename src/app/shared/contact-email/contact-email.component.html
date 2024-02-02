@@ -4,6 +4,31 @@
 </h3>
 <p>
   Puteti completa
-  <a href="#">formularul</a>
+
+	<a routerLink="contact" class="d-xxl-none">
+		formularul
+	</a>
+
+	<button class="d-none d-xxl-inline btn btn-link btn-lg user-select-auto pe-0 ps-0 pt-1" (click)="openFormModal(content)">
+		formularul
+	</button>
+
   si vom lua legatura cu voi in cel mai scurt timp
 </p>
+
+<!-- Modal -->
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">
+			Va asteptam emailul cu mare placere
+		</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<app-form></app-form>
+	</div>
+	<div class="modal-footer">
+
+		<!-- <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button> -->
+	</div>
+</ng-template>

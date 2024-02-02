@@ -1,4 +1,5 @@
-<form [formGroup]="form" class="needs-validation row w-25 d-inline p-2" novalidate id="cform">
+<form [formGroup]="form" class="needs-validation row d-inline p-2" novalidate id="cform">
+
   <div class="text-center mb-4">
     <img class="mail-svg-size" src="assets/svg/mail_opened_re_i38e.svg">
     <p class="display-8 u-letter-spacing-1 fw-normal">Raspundem cat se poate de repede</p>
@@ -43,11 +44,8 @@
   <div class="mb-4">
     <textarea class="form-control border border-top-0 border-start-0 border-end-0 rounded-0 bo border-dark" rows="3" cols="10" placeholder="Mesaj"></textarea>
   </div>
-  
-  <button class="btn btn-secondary text-bg-primary fw-semibold" (click)="submitFrom()" type="submit">Trimite</button>
+
+  <div class="d-inline-block text-center">
+    <button class="btn btn-secondary text-bg-primary fw-semibold pe-5 ps-5" (click)="submitFrom()" type="submit">Trimite</button>
+  </div>
 </form>
-<!-- 
-<div>From valid: {{this.form.valid}}</div>
-<div>Name valid: {{this.form.controls['name'].valid}}</div>
-<div>Email valid: {{this.form.controls['email'].valid}}</div>
-<div>Tel valid: {{this.form.controls['tel'].valid}}</div> -->
