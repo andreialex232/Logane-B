@@ -1,5 +1,5 @@
-<nav class="navbar bg-white navbar-expand-lg justify-content-center">
-  <div class="container-fluid me-5 ms-5  justify-content-center">
+<nav class="navbar bg-white navbar-expand-lg justify-content-center align-items-center">
+  <div class="container-fluid me-5 ms-5 justify-content-center">
     <div class="user-select-none">
       <a routerLink="" class="navbar-brand d-flex">
         <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="Company logo" width="40">
@@ -7,19 +7,19 @@
         <!-- <img src="assets/images/Logo-cpm.png" class="me-2 navbar-logo" alt="Company logo"> -->
       </a>
     </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <button (click)="isMenuCollapsed = !isMenuCollapsed" class="navbar-toggler mt-2 mt-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item me-4">
-          <a routerLink="about" class="nav-link btn-link-nav fw-semibold">Despre noi</a>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch mt-2 mt-lg-0">
+        <li class="nav-item me-lg-4 mb-1 mb-lg-0">
+          <a [routerLink]="'about'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
         </li>
-        <li class="nav-item me-4">
-          <a routerLink="information" class="nav-link btn-link-nav fw-semibold">Informatii</a>
+        <li class="nav-item me-lg-4 mb-1 mb-lg-0">
+          <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Informatii</a>
         </li>
-        <li class="nav-item me-4">
-          <a routerLink="contact" class="nav-link btn-link-nav fw-semibold">Contact</a>
+        <li class="nav-item me-lg-4 mb-3 mb-lg-0">
+          <a [routerLink]="'contact'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
         </li>
         <li class="nav-item">
           <a href="tel:0745235622" class="nav-link btn btn-secondary text-bg-primary fw-semibold ps-4 pe-4">Suna acum</a>
@@ -53,3 +53,4 @@
     &copy; Copyright 2024 CPM Rent Solutions. Toate drepturile rezervate.
   </p>
 </footer>
+

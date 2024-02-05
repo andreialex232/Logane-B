@@ -9,10 +9,19 @@ $btn-padding-y-sm: $button-padding-y;
 $btn-padding-x-lg: $button-padding-x;
 $btn-padding-y-lg: $button-padding-y;
 
+$btn-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$box-shadow: none;
+$box-shadow-sm: none;
+$box-shadow-lg: none;
+$box-shadow-inset: none;
+
 $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, transform .2s ease-in-out;
 $nav-link-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, background-size 0.3s ease-out, background-position 0s 0.3s ease-in-out;
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:active {
   background-color: $secondary !important;
 }
 
