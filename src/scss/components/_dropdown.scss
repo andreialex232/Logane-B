@@ -1,0 +1,8 @@
+.dropdown-menu {
+  width: 250px !important;
+}
+
+.caret-off::before,
+.caret-off::after {
+  display: none !important;
+}

@@ -16,3 +16,7 @@ $spacers: (
   13: $spacer * 20,
   14: $spacer * 22
 ) !default;
+
+$focus-ring-blur: 1;
+$focus-ring-opacity: 1;
+$focus-ring-color: $secondary;

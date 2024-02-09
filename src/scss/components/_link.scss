@@ -1,7 +1,10 @@
+$link-hover-color: $secondary;
+
 .btn-link-nav {
   @include bgUnderline($secondary);
 
-  &:hover {
+  &:hover,
+  &:active {
     @include bgUnderlineHover();
   }
 }
@@ -14,4 +17,15 @@
   }
 }
 
-$link-hover-color: $secondary;
+.dropdown-menu-link {
+  background-image: linear-gradient(to bottom right, $primary, $secondary) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0% !important;
+
+  &:hover,
+  &:active
+  &:focus {
+    color: #fff !important;
+    background-size: 100% !important; 
+  }
+}

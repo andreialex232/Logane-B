@@ -10,15 +10,63 @@
       <button (click)="isMenuCollapsed = !isMenuCollapsed" class="navbar-toggler mt-2 mt-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch mt-2 mt-lg-0">
+    <div
+      [ngbCollapse]="isMenuCollapsed" 
+      class="collapse navbar-collapse" 
+      id="navbarNavDropdown">
+      <ul 
+        (mouseleave)="myDrop.close()"
+        class="navbar-nav ms-auto align-items-center align-items-lg-stretch ">
         <li class="nav-item me-lg-4 mb-1 mb-lg-0">
           <a [routerLink]="'about'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
         </li>
-        <li class="nav-item me-lg-4 mb-1 mb-lg-0">
-          <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Informatii</a>
+        <li class="nav-item me-lg-4 mb-1 mb-lg-0"> 
+          <div class="drop d-inline-block d-flex justify-content-center align-items-center flex-column" ngbDropdown #myDrop="ngbDropdown">
+            <button
+              (mouseenter)="myDrop.open()"
+              type="button"
+              class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
+              id="dropdown"
+              ngbDropdownToggle
+              (focus)="myDrop.open()">
+              Informatii
+            </button>
+            <ul
+              ngbDropdownMenu 
+              aria-labelledby="informationDropdown" 
+              class="dropdown-menu text-center m-auto"
+              (mouseleave)="myDrop.close()">
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold dropdown-menu-link">Cum devin sofer partener</a>
+              </li>
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold dropdown-menu-link">Comision fix sau variabil</a>
+              </li>
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold dropdown-menu-link">Ce este flota de ridesharing</a>
+              </li>
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold dropdown-menu-link">Registrul de evidenta fiscala</a>
+              </li>
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold">Venituri si cheltuieli sofer</a>
+              </li>
+              <li>
+                <a ngbDropdownItem [routerLink]="'information'" (click)="isMenuCollapsed = true" class="nav-link fw-semibold">Carte de munca sau PFA</a>
+              </li>
+            </ul>
+<!--             <ul ngbDropdownMenu aria-labelledby="dropdown" class="text-center dropdown-menu dropdown-menu-end">
+              <li class="">
+                <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="text-black nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1">Cum devin sofer partener</a>
+              </li>
+              <li>
+                <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="text-black nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1">Comision fix sau variabil</a>
+              </li>
+            </ul> -->
+          </div>
         </li>
-        <li class="nav-item me-lg-4 mb-3 mb-lg-0">
+        <li
+          class="nav-item me-lg-4 mb-3 mb-lg-0">
           <a [routerLink]="'contact'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
         </li>
         <li class="nav-item">
@@ -53,4 +101,3 @@
     &copy; Copyright 2024 CPM Rent Solutions. Toate drepturile rezervate.
   </p>
 </footer>
-

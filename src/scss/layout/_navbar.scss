@@ -1,7 +1,8 @@
-$navbar-padding-y: .8rem;
-$navbar-brand-font-size: 2rem;
-$navbar-nav-link-padding-x: .5rem;
-$navbar-toggler-border-radius: 5px;
+$navbar-padding-y: $nav-padding-y;
+$navbar-brand-font-size: $nav-brand-font-size;
+$navbar-nav-link-padding-x: $nav-nav-link-padding-x;
+$navbar-toggler-border-radius: $nav-toggler-border-radius;
+
 .navbar-logo {
   height: 48px;
   width: 100px;
