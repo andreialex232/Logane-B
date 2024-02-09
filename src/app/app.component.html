@@ -7,7 +7,13 @@
         <!-- <img src="assets/images/Logo-cpm.png" class="me-2 navbar-logo" alt="Company logo"> -->
       </a>
     </div>
-      <button (click)="isMenuCollapsed = !isMenuCollapsed" class="navbar-toggler mt-2 mt-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle Navigation">
+      <button 
+        (click)="isMenuCollapsed = !isMenuCollapsed" 
+        class="navbar-toggler mt-2 mt-lg-0" 
+        type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarNavDropdown" 
+        aria-expanded="false" 
+        aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <div
@@ -16,13 +22,18 @@
       id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch ">
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
-          <a [routerLink]="'about'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
+          <a 
+            [routerLink]="'about'" 
+            (click)="isMenuCollapsed = true" 
+            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0"> 
           <div 
             (mouseover)="myDrop.open()"
             (mouseleave)="myDrop.close()"
-            class="drop d-inline-block d-flex justify-content-center align-items-center flex-column" ngbDropdown #myDrop="ngbDropdown">
+            class="drop d-inline-block d-flex justify-content-center align-items-center flex-column" 
+            ngbDropdown 
+            #myDrop="ngbDropdown">
             <button
               type="button"
               class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
@@ -89,10 +100,15 @@
           </div>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
-          <a [routerLink]="'contact'" (click)="isMenuCollapsed = true" class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
+          <a 
+            [routerLink]="'contact'" 
+            (click)="isMenuCollapsed = true" 
+            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
         </li>
         <li class="nav-item">
-          <a href="tel:0745235622" class="nav-link btn btn-secondary text-bg-primary fw-semibold ps-4 pe-4">Suna acum</a>
+          <a 
+            href="tel:0745235622" 
+            class="nav-link btn btn-secondary text-bg-primary fw-semibold ps-4 pe-4">Suna acum</a>
         </li>
       </ul>
     </div>
