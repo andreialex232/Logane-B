@@ -1,0 +1,9 @@
+.contact-bg {
+  background-image: url(../../assets/svg/contact-header-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    height: 32vh;
+  }
+}

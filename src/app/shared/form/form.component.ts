@@ -24,7 +24,7 @@ export class FormComponent {
     })
   }
 
-  submitFrom(){
+  submitForm(){
     this.attemptSubmit = true;
 
     if(this.form.valid){

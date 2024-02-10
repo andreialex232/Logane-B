@@ -1,7 +1,6 @@
-<form [formGroup]="form" class="needs-validation row d-inline p-2" novalidate id="cform">
-  <div class="text-center mb-4">
-    <img class="mail-svg-size" src="assets/svg/mail_opened_re_i38e.svg">
-    <p class="display-8 u-letter-spacing-1 fw-normal">Raspundem cat se poate de repede</p>
+<!-- <form [formGroup]="form" class="needs-validation row d-inline p-2" novalidate id="cform">
+  <div class="text-start mb-4">
+    <p class="display-8 u-letter-spacing-1 fw-normal">Trimiteti-ne un email</p>
   </div>
 
   <div class="mb-4 position-relative pb-3 pt-3">
@@ -47,4 +46,114 @@
   <div class="d-inline-block text-center">
     <button class="btn btn-secondary text-bg-primary fw-semibold pe-5 ps-5" (click)="submitFrom()" type="submit">Trimite</button>
   </div>
+</form> -->
+<form 
+  [formGroup]="form"
+  class="bg-white p-sm-3 p-md-4 needs-validation"
+  novalidate
+  >
+
+  <h2 class="text-center text-md-start h3 mt-2 mb-4 mb-lg-4">Trimiteti un email</h2>
+
+  <div class="row mb-4">
+    <div class="col-12 col-lg-6 position-relative">
+      <label 
+        for="name" 
+        class="form-label u-letter-spacing-1 fw-normal">
+        Nume complet
+      </label>
+      <input
+        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('name')?.errors }"
+        formControlName="name"
+        type="text" 
+        class="form-control u-letter-spacing-1" 
+        placeholder="Pop Adrian" 
+        id="name"
+        >
+        <div 
+          *ngIf="attemptSubmit && form.get('name')?.errors"
+          class="invalid-feedback position-absolute">
+          <div *ngIf="attemptSubmit && form.get('name')?.errors!['required']">
+            Campul trebuie completat
+          </div>
+          <div *ngIf="attemptSubmit && form.get('name')?.errors!['pattern']">
+            Campul nu poate contine numere
+          </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-6 position-relative mt-4 mt-lg-0">
+      <label 
+        for="tel" 
+        class="form-label u-letter-spacing-1 fw-normal"
+        >Telefon
+        </label>
+      <input 
+        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('tel')?.errors }"
+        formControlName="tel"
+        type="tel"
+        class="form-control u-letter-spacing-1" 
+        placeholder="0745-235-622"
+        >
+      <div 
+        *ngIf="attemptSubmit && form.get('tel')?.errors"
+        class="invalid-feedback position-absolute">
+        <div *ngIf="attemptSubmit && form.get('tel')?.errors!['required']">
+          Campul trebuie completat
+        </div>
+        <div *ngIf="attemptSubmit && form.get('tel')?.errors!['pattern']">
+          Campul nu poate contine litere
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mb-lg-5">
+    <div class="col">
+      <label 
+        for="email" 
+        class="form-label u-letter-spacing-1 fw-normal"
+        >Email
+        </label>
+      <input 
+        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('email')?.errors }"
+        formControlName="email"
+        type="email" 
+        class="form-control u-letter-spacing-1" 
+        placeholder="popadrian@yahoo.com"
+        >
+      <div
+        *ngIf="attemptSubmit && form.get('email')?.errors"
+        class="invalid-feedback position-absolute">
+        <div *ngIf="attemptSubmit && form.get('email')?.errors!['required']">
+          Campul trebuie completat
+        </div>
+        <div *ngIf="attemptSubmit && form.get('email')?.errors!['email']">
+          Introduceti un email valid
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mb-lg-5">
+    <div class="col">
+      <label 
+        for="message" 
+        class="form-label u-letter-spacing-1 fw-normal">
+        Mesaj
+      </label>
+      <textarea 
+        class="form-control u-letter-spacing-1"
+        placeholder="Va contactez cu dorinta de..." 
+        rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button 
+      (click)="submitForm()"
+      type="submit" 
+      class="btn btn-secondary text-bg-primary fw-semibold">Trimite</button>
+  </div>
+
 </form>
