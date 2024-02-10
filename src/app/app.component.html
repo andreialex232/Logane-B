@@ -1,5 +1,5 @@
 <nav class="navbar bg-white navbar-expand-lg justify-content-center align-items-center">
-  <div class="container-fluid me-5 ms-5 justify-content-center">
+  <div class="container-fluid pe-6 ps-6 justify-content-center">
     <div class="user-select-none">
       <a routerLink="" class="navbar-brand d-flex">
         <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="Company logo" width="40">
@@ -21,6 +21,12 @@
       class="collapse navbar-collapse" 
       id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch ">
+        <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
+          <a 
+            [routerLink]="''" 
+            (click)="isMenuCollapsed = true" 
+            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Acasa</a>
+        </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             [routerLink]="'about'" 
@@ -79,24 +85,16 @@
                   ngbDropdownItem 
                   [routerLink]="'information'" 
                   (click)="isMenuCollapsed = true" 
-                  class="nav-link fw-semibold">Venituri si cheltuieli sofer</a>
+                  class="nav-link fw-semibold dropdown-menu-link">Venituri si cheltuieli sofer</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
                   (click)="isMenuCollapsed = true" 
-                  class="nav-link fw-semibold">Carte de munca sau PFA</a>
+                  class="nav-link fw-semibold dropdown-menu-link">Carte de munca sau PFA</a>
               </li>
             </ul>
-<!--             <ul ngbDropdownMenu aria-labelledby="dropdown" class="text-center dropdown-menu dropdown-menu-end">
-              <li class="">
-                <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="text-black nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1">Cum devin sofer partener</a>
-              </li>
-              <li>
-                <a [routerLink]="'information'" (click)="isMenuCollapsed = true" class="text-black nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1">Comision fix sau variabil</a>
-              </li>
-            </ul> -->
           </div>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
