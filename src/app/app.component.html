@@ -4,17 +4,24 @@
       <a routerLink="" class="navbar-brand d-flex">
         <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="Company logo" width="40">
         Logane
-        <!-- <img src="assets/images/Logo-cpm.png" class="me-2 navbar-logo" alt="Company logo"> -->
       </a>
     </div>
       <button 
         (click)="isMenuCollapsed = !isMenuCollapsed" 
-        class="navbar-toggler mt-2 mt-lg-0" 
+        class="navbar-toggler collapsed border-0 shadow-none d-flex d-lg-none flex-column justify-content-around p-0" 
         type="button" data-bs-toggle="collapse" 
         data-bs-target="#navbarNavDropdown" 
         aria-expanded="false" 
         aria-label="Toggle Navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span 
+          [ngClass]="{'top': !isMenuCollapsed}"
+          class="toggler-icon"></span>
+        <span
+          [ngClass]="{'middle': !isMenuCollapsed}"
+          class="toggler-icon"></span>
+        <span
+          [ngClass]="{'bottom': !isMenuCollapsed}"
+          class="toggler-icon"></span>
       </button>
     <div
       [ngbCollapse]="isMenuCollapsed" 

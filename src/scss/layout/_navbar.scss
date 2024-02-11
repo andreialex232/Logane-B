@@ -8,3 +8,33 @@ $navbar-toggler-border-radius: $nav-toggler-border-radius;
   width: 100px;
 }
 
+.navbar-toggler {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  transition: .5s ease-in-out;
+  
+}
+
+.toggler-icon {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  transition: all .2s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.top {
+  transform-origin: left;
+  transform: rotate(45deg);
+}
+
+.middle {
+  opacity: 0;
+}
+
+.bottom {
+  transform-origin: left;
+  transform: rotate(-45deg);
+}
