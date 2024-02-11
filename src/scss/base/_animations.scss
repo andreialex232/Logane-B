@@ -76,6 +76,16 @@
   }
 };
 
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
 // Animations =============================================
 // HeaderHeading animations =======================
 
@@ -124,4 +134,10 @@
 
 .animated-arrow {
   animation: arrow 1s ease-in-out 2.10s backwards
+}
+
+// Dropdown animations =======================
+
+.dropdown-menu {
+  animation: dropdown .2s linear;
 }
