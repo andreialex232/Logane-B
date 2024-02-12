@@ -52,11 +52,18 @@
             #myDrop="ngbDropdown">
             <button
               type="button"
-              class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
+              class="caret-off nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
               id="dropdown"
               ngbDropdownToggle
               (focus)="myDrop.open()">
-              Informatii
+              <div class="d-flex justify-content-center align-items-center gap-1">
+                Informatii
+                <img 
+                  [ngClass]="{ 'chevron-down-rotate': myDrop.isOpen() }"
+                  class="chevron-down-size"
+                  src="assets/svg/chevron-down.svg"
+                  alt="Chevron pointing down">
+              </div>
             </button>
             <ul
               ngbDropdownMenu

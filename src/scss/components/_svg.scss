@@ -1,14 +1,32 @@
+// Arrow divider
+
 .arrow {
   height: 4rem;
   width: 4rem;
 }
+
+// Tel svg
 
 .contact-svg-size {
   width: 11rem;
   height: 11rem;
 }
 
+// Email svg
+
 .mail-svg-size {
   width: 5rem;
   height: 5rem;
+}
+
+// Chevron
+
+.chevron-down-size {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform .15s ease-in-out;
+}
+
+.chevron-down-rotate {
+  transform: rotate(-180deg);
 }
