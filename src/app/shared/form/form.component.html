@@ -63,7 +63,7 @@
         <div *ngIf="attemptSubmit && tel?.errors!['required']">
           Campul trebuie completat
         </div>
-        <div *ngIf="attemptSubmit && tel?.errors!['pattern'] && tel?.touched || tel?.dirty">
+        <div *ngIf="attemptSubmit && tel?.errors!['pattern']">
           Campul nu poate contine litere
         </div>
       </div>
