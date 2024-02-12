@@ -4,10 +4,10 @@ import { LandingPageComponent } from './home/landing-page/landing-page.component
 import { ContactHomeComponent } from './contact/contact-home/contact-home.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'contact', component: ContactHomeComponent },
-  { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
-  { path: 'information', loadChildren: () => import('./info/info.module').then(m => m.InfoModule) },
+  { path: '', title: 'Acasa', component: LandingPageComponent },
+  { path: 'contact',title: 'Contact', component: ContactHomeComponent },
+  { path: 'about', title: 'Despre noi', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
+  { path: 'information', title: 'Informatii utile', loadChildren: () => import('./info/info.module').then(m => m.InfoModule) },
 ];
 
 @NgModule({
@@ -15,3 +15,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 
