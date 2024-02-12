@@ -1,10 +1,10 @@
+
 <form 
   [formGroup]="form"
-  class="bg-white p-sm-3 p-md-4 needs-validation"
+  class="needs-validation"
   novalidate
+  aria-label="Contact Form"
   >
-
-  <h2 class="text-center text-md-start h3 mt-2 mb-4 mb-lg-4">Trimiteti un email</h2>
 
   <div class="row mb-4">
     <div class="col-12 col-lg-6 position-relative">
@@ -15,7 +15,9 @@
       </label>
       <input
         autocomplete="name"
-        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('name')?.errors }"
+        aria-autocomplete="list"
+        aria-required="true"
+        [ngClass]="{ 'is-invalid': attemptSubmit && name?.errors }"
         formControlName="name"
         type="text" 
         class="form-control u-letter-spacing-1" 
@@ -23,12 +25,16 @@
         id="name"
         >
         <div 
-          *ngIf="attemptSubmit && form.get('name')?.errors"
+          *ngIf="attemptSubmit && name?.errors"
           class="invalid-feedback position-absolute">
-          <div *ngIf="attemptSubmit && form.get('name')?.errors!['required']">
+          <div 
+            *ngIf="attemptSubmit && name?.errors!['required']"
+            aria-live="polite">
             Campul trebuie completat
           </div>
-          <div *ngIf="attemptSubmit && form.get('name')?.errors!['pattern']">
+          <div
+            *ngIf="attemptSubmit && name?.errors!['pattern']"
+            aria-live="polite">
             Campul nu poate contine numere
           </div>
         </div>
@@ -42,7 +48,9 @@
         </label>
       <input 
         autocomplete="tel-local"
-        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('tel')?.errors }"
+        aria-autocomplete="list"
+        aria-required="true"
+        [ngClass]="{ 'is-invalid': attemptSubmit && tel?.errors }"
         formControlName="tel"
         type="tel"
         class="form-control u-letter-spacing-1" 
@@ -50,12 +58,12 @@
         id="tel"
         >
       <div 
-        *ngIf="attemptSubmit && form.get('tel')?.errors"
+        *ngIf="attemptSubmit && tel?.errors"
         class="invalid-feedback position-absolute">
-        <div *ngIf="attemptSubmit && form.get('tel')?.errors!['required']">
+        <div *ngIf="attemptSubmit && tel?.errors!['required']">
           Campul trebuie completat
         </div>
-        <div *ngIf="attemptSubmit && form.get('tel')?.errors!['pattern']">
+        <div *ngIf="attemptSubmit && tel?.errors!['pattern'] && tel?.touched || tel?.dirty">
           Campul nu poate contine litere
         </div>
       </div>
@@ -71,7 +79,9 @@
         </label>
       <input 
         autocomplete="email"
-        [ngClass]="{ 'is-invalid': attemptSubmit && form.get('email')?.errors }"
+        aria-autocomplete="list"
+        aria-required="true"
+        [ngClass]="{ 'is-invalid': attemptSubmit && email?.errors }"
         formControlName="email"
         type="email" 
         class="form-control u-letter-spacing-1" 
@@ -79,12 +89,12 @@
         id="email"
         >
       <div
-        *ngIf="attemptSubmit && form.get('email')?.errors"
+        *ngIf="attemptSubmit && email?.errors"
         class="invalid-feedback position-absolute">
-        <div *ngIf="attemptSubmit && form.get('email')?.errors!['required']">
+        <div *ngIf="attemptSubmit && email?.errors!['required']">
           Campul trebuie completat
         </div>
-        <div *ngIf="attemptSubmit && form.get('email')?.errors!['email']">
+        <div *ngIf="attemptSubmit && email?.errors!['email']">
           Introduceti un email valid
         </div>
       </div>
@@ -110,6 +120,7 @@
     <button 
       (click)="submitForm()"
       type="submit" 
+      aria-label="Send Email"
       class="btn btn-secondary btn-active btn-hover text-bg-primary fw-semibold">Trimite</button>
   </div>
 

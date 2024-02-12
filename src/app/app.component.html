@@ -2,16 +2,18 @@
   <div class="container-fluid pe-6 ps-6 justify-content-center">
     <div class="user-select-none">
       <a routerLink="" class="navbar-brand d-flex">
-        <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="Company logo" width="40">
+        <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40">
         Logane
       </a>
     </div>
       <button 
         (click)="isMenuCollapsed = !isMenuCollapsed" 
         class="navbar-toggler collapsed border-0 shadow-none d-flex d-lg-none flex-column justify-content-around p-0" 
-        type="button" data-bs-toggle="collapse" 
-        data-bs-target="#navbarNavDropdown" 
-        aria-expanded="false" 
+        type="button"
+        id="mobileDropdown"
+        data-bs-toggle="collapse" 
+        data-bs-target="#navDropdown"
+        [ariaExpanded]="isMenuCollapsed"
         aria-label="Toggle Navigation">
         <span 
           [ngClass]="{'top': !isMenuCollapsed}"
@@ -25,9 +27,10 @@
       </button>
     <div
       [ngbCollapse]="isMenuCollapsed" 
-      class="collapse navbar-collapse" 
-      id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch ">
+      class="collapse navbar-collapse"
+      aria-labelledby="mobileDropdown"
+      id="navDropdown">
+      <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch">
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             [routerLink]="''" 
@@ -56,8 +59,7 @@
               Informatii
             </button>
             <ul
-              ngbDropdownMenu 
-              aria-labelledby="informationDropdown" 
+              ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
               <li>
                 <a

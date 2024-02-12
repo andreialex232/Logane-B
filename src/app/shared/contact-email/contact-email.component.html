@@ -1,32 +1,41 @@
-<img class="contact-svg-size" src="assets/svg/mail_opened_re_i38e.svg">
+<img 
+	class="contact-svg-size" 
+	src="assets/svg/mail_opened_re_i38e.svg"
+	alt="Image of an opened mail">
 <h3 class="mt-2 mb-2">
   Prin email
 </h3>
 <p>
   Puteti completa
-
-	<a routerLink="contact" class="d-xxl-none">
+	<a 
+		routerLink="contact" 
+		class="d-xxl-none">
 		formularul
 	</a>
-
-	<button class="d-none d-xxl-inline btn btn-link btn-lg user-select-auto pe-0 ps-0 pt-1" (click)="openFormModal(content)">
+	<button
+		class="d-none d-xxl-inline btn btn-link btn-lg user-select-auto pe-0 ps-0 pt-1" 
+		(click)="openFormModal(content)">
 		formularul
 	</button>
-
   si vom lua legatura cu voi in cel mai scurt timp
 </p>
 
 <!-- Modal -->
 <ng-template #content let-modal>
-	<div class="modal-header">
-		<h4 class="modal-title">
-			Va asteptam emailul cu mare placere
-		</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	<div class="modal-header border-0">
+		<h1 class="h3 modal-title">
+			Trimiteti un mail
+		</h1>
+		<button 
+			type="button" 
+			class="btn-close" 
+			aria-label="Close Modal" 
+			(click)="modal.dismiss('Cross click')"></button>
 	</div>
+	<p class="p-3">
+		Si luam legatura in cel mai scurt timp
+	</p>
 	<div class="modal-body">
 		<app-form></app-form>
-	</div>
-	<div class="modal-footer">
 	</div>
 </ng-template>

@@ -14,6 +14,6 @@ export class ContactEmailComponent {
   private modalService = inject(NgbModal);
   
 	openFormModal(content: TemplateRef<any>) {
-		this.modalService.open(content, { centered: true });
+    this.modalService.open(content, { size: 'lg', centered: true });
 	}
 }

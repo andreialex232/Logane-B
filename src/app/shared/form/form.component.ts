@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ElementRef } from '@angular/core';
-import { ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -24,9 +23,21 @@ export class FormComponent {
     })
   }
 
+  get name() {
+    return this.form.get('name');
+  }
+
+  get email() {
+    return this.form.get('email');
+  }
+
+  get tel() {
+    return this.form.get('tel');
+  }
+
   submitForm(){
     this.attemptSubmit = true;
-
+    
     if(this.form.valid){
       console.log('valid')
     } else {
