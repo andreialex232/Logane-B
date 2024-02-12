@@ -13,6 +13,7 @@ $font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -
 $font-size: 1.2rem;
 
 // Buttons
+$button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, transform .2s ease-in-out;
 $button-radius: 4px;
 $button-padding-x: 25px;
 $button-padding-y: 10px;
@@ -22,6 +23,7 @@ $button-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 $img-height: 75vh;
 
 // Navbar
+$nav-transition: color .20s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, background-size 0.20s ease-out, background-position 0s 0.3s ease-in-out;
 $nav-padding-y: .8rem;
 $nav-brand-font-size: 2rem;
 $nav-nav-link-padding-x: .5rem;
