@@ -31,16 +31,18 @@
       aria-labelledby="mobileDropdown"
       id="navDropdown">
       <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch">
-        <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
+        <li 
+          (click)="isMenuCollapsed = true"
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             [routerLink]="''" 
-            (click)="isMenuCollapsed = true" 
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Acasa</a>
         </li>
-        <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
+        <li 
+          (click)="isMenuCollapsed = true" 
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             [routerLink]="'about'" 
-            (click)="isMenuCollapsed = true" 
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0"> 
@@ -66,62 +68,58 @@
               </div>
             </button>
             <ul
+              (click)="isMenuCollapsed = true" 
               ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
               <li>
                 <a
                   ngbDropdownItem
-                  [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
+                  [routerLink]="'information'"
                   class="nav-link fw-semibold dropdown-menu-link">Cum devin sofer partener</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
                   class="nav-link fw-semibold dropdown-menu-link">Comision fix sau variabil</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
-                  class="nav-link fw-semibold dropdown-menu-link">Ce este flota de ridesharing</a>
+                  class="nav-link fw-semibold dropdown-menu-link">Casa de marcat</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
-                  class="nav-link fw-semibold dropdown-menu-link">Registrul de evidenta fiscala</a>
+                  class="nav-link fw-semibold dropdown-menu-link">Carte de munca</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
                   class="nav-link fw-semibold dropdown-menu-link">Venituri si cheltuieli sofer</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   [routerLink]="'information'" 
-                  (click)="isMenuCollapsed = true" 
-                  class="nav-link fw-semibold dropdown-menu-link">Carte de munca sau PFA</a>
+                  class="nav-link fw-semibold dropdown-menu-link">OUG 49/2019</a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
+        <li 
+          (click)="isMenuCollapsed = true"
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
-            [routerLink]="'contact'" 
-            (click)="isMenuCollapsed = true" 
+            [routerLink]="'contact'"  
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
         </li>
         <li class="nav-item">
           <a 
-            href="tel:0745235622" 
+            href="tel:{{tel}}" 
             class="nav-link btn btn-secondary text-bg-primary fw-semibold ps-4 pe-4">Suna acum</a>
         </li>
       </ul>
