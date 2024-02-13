@@ -1,5 +1,18 @@
+
+$dropdown-padding-x: $drop-padding-x;
+$dropdown-padding-y: $drop-padding-y;
+
 .dropdown-menu {
   width: 250px !important;
+}
+
+.dropdown-toggle:focus {
+  color: $grey !important;
+}
+
+.dropdown-toggle:focus-visible {
+  box-shadow: none !important;
+  outline: 0 !important;
 }
 
 .caret-off::before,
@@ -7,5 +20,3 @@
   display: none !important;
 }
 
-$dropdown-padding-x: $drop-padding-x;
-$dropdown-padding-y: $drop-padding-y;

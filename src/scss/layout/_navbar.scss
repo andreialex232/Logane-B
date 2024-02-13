@@ -4,6 +4,16 @@ $navbar-nav-link-padding-x: $nav-nav-link-padding-x;
 $navbar-toggler-border-radius: $nav-toggler-border-radius;
 $nav-link-transition: $nav-transition;
 
+nav.navbar > div > div > ul > li > a:hover,
+nav.navbar > div > div > ul > li > div > button:hover {
+  color: $grey;
+}
+
+nav.navbar > div > div > ul > li > a:focus,
+nav.navbar > div > div > ul > li > div > button:focus {
+  color: $grey;
+}
+
 .navbar-logo {
   height: 48px;
   width: 100px;
@@ -14,7 +24,6 @@ $nav-link-transition: $nav-transition;
   height: 35px;
   position: relative;
   transition: .5s ease-in-out;
-  
 }
 
 .toggler-icon {

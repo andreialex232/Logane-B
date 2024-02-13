@@ -24,7 +24,8 @@ $btn-transition: $button-transition;
   background-color: $secondary !important;
 }
 
-.btn-hover:hover {
+.btn-hover:hover,
+.btn-hover:focus {
   transform: translateY(-3px);
 }
 

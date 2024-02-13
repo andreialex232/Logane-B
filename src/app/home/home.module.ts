@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { HeroComponent } from './hero/hero.component';
@@ -23,7 +25,8 @@ import { ContactTelComponent } from '../shared/contact-tel/contact-tel.component
     ArrowDividerAnimatedComponent,
     ArrowDividerComponent,
     ContactEmailComponent,
-    ContactTelComponent
+    ContactTelComponent,
+    RouterLink
   ]
 })
 export class HomeModule { }
