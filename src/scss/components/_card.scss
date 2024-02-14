@@ -15,4 +15,26 @@
   }
 }
 
+.card-about {
+  width: auto !important;
+  height: auto !important;
+
+  @include media-breakpoint-up(sm) {
+    width: 600px !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 700px !important;
+  }
+
+/*   @include media-breakpoint-up(lg) {
+    height: 250px !important;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 200px !important;
+  } */
+}
+
+
 

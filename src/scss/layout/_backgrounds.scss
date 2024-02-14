@@ -7,3 +7,21 @@
     height: 32vh;
   }
 }
+
+.about-us-bg {
+  background-image: url(../../assets/svg//about-header-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include media-breakpoint-up(lg) {
+    height: 32vh;
+  }
+}
+
+.about-us-img {
+  background-image: url(../../assets/images/about-us.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 700px;
+  height: 460px;
+}
