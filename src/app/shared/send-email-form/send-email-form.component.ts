@@ -4,9 +4,9 @@ import { ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss'],
+  selector: 'app-send-email-form',
+  templateUrl: './send-email-form.component.html',
+  styleUrls: ['./send-email-form.scss'],
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule]
 })

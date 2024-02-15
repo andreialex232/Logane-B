@@ -1,6 +1,6 @@
 import { Component, TemplateRef, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormComponent } from '../form/form.component';
+import { FormComponent } from '../send-email-form/send-email-form.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
