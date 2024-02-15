@@ -9,7 +9,7 @@
       </a>
     </div>
       <button 
-        (click)="isMenuCollapsed = !isMenuCollapsed" 
+        (click)="toggleMobileMenu()"
         class="navbar-toggler collapsed border-0 shadow-none d-flex d-lg-none flex-column justify-content-around p-0" 
         type="button"
         id="mobileDropdown"
@@ -34,16 +34,16 @@
       id="navDropdown">
       <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch">
         <li 
-          (click)="isMenuCollapsed = true"
           class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
+            (click)="onClickMenuItem()"
             [routerLink]="''" 
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Acasa</a>
         </li>
         <li 
-          (click)="isMenuCollapsed = true" 
           class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
+            (click)="onClickMenuItem()"
             [routerLink]="'about'"
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
         </li>
@@ -59,7 +59,7 @@
               type="button"
               class="caret-off nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
               id="dropdown"
-              ngbDropdownAnchor
+              ngbDropdownToggle
               (focus)="myDrop.open()">
               <div class="d-flex justify-content-center align-items-center gap-1">
                 Informatii
@@ -77,46 +77,52 @@
               <li>
                 <a
                   ngbDropdownItem
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/how-to-become-a-driver'"
                   class="nav-link fw-semibold dropdown-menu-link">Cum devin sofer partener</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/fees'" 
                   class="nav-link fw-semibold dropdown-menu-link">Comision fix sau variabil</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/checkout'" 
                   class="nav-link fw-semibold dropdown-menu-link">Casa de marcat</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/employment'" 
                   class="nav-link fw-semibold dropdown-menu-link">Carte de munca</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/income'" 
                   class="nav-link fw-semibold dropdown-menu-link">Venituri si cheltuieli sofer</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
+                  (click)="onClickMenuItem()"
                   [routerLink]="'information/legal'" 
                   class="nav-link fw-semibold dropdown-menu-link">OUG 49/2019</a>
               </li>
             </ul>
           </div>
         </li>
-        <li 
-          (click)="isMenuCollapsed = true"
+        <li
           class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
+            (click)="onClickMenuItem()"
             [routerLink]="'contact'"  
             class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
         </li>

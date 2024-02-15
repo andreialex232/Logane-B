@@ -14,4 +14,12 @@ export class AppComponent {
   public isMenuCollapsed = true;
 
   constructor(private telSvc: PhoneNumberService){}
+
+  onClickMenuItem() {
+    this.isMenuCollapsed = true;
+  }
+
+  public toggleMobileMenu(){
+    this.isMenuCollapsed = !this.isMenuCollapsed;
+  }
 }
