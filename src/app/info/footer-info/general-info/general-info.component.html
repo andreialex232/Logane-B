@@ -1,0 +1,21 @@
+<div class="text-center text-lg-start mt-4 d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5">
+  <section 
+    *ngFor="let item of generalInformationItems"
+    class="card border-0 card-info">
+    <div class="card-body d-flex flex-column justify-content-between">
+      <h3 class="card-title lh-1">
+        {{ item.heading }}
+      </h3>
+      <p class="mt-xl-n3 card-text u-letter-spacing-1 fw-normal">
+        {{ item.text }}
+      </p>
+      <div>
+        <a 
+          class="card-link btn btn-secondary btn-sm text-bg-primary"
+          routerLink="{{ item.link }}">
+          Afla mai multe
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

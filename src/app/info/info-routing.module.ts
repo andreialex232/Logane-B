@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { InfoHomeComponent } from './info-home/info-home.component';
 import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
 import { FeesComponent } from './fees/fees.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { EmploymentComponent } from './employment/employment.component';
 import { IncomeComponent } from './income/income.component';
 import { LegalComponent } from './legal/legal.component';
+import { FooterInfoHomeComponent } from './footer-info/footer-info-home/footer-info-home.component';
 
 const routes: Routes = [
-  { path: '', component: InfoHomeComponent },
+  { path: '', component: FooterInfoHomeComponent },
   { path: 'how-to-become-a-driver', title: 'Cum devin sofer partener', component: BecomeADriverComponent },
   { path: 'fees', title: 'Comisioane', component: FeesComponent },
   { path: 'checkout', title: 'Casa de marcat', component: CheckoutComponent },
