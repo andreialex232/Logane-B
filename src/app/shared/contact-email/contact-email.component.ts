@@ -1,5 +1,5 @@
-import { Component, TemplateRef, inject } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, TemplateRef } from '@angular/core';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormComponent } from '../send-email-form/send-email-form.component';
 import { RouterLink } from '@angular/router';
 
@@ -11,9 +11,17 @@ import { RouterLink } from '@angular/router';
   imports: [FormComponent, RouterLink]
 })
 export class ContactEmailComponent {
-  private modalService = inject(NgbModal);
+
+  constructor(private modalSvc: NgbModal){}
+
+  handleSendEmail(event: string, currentModal: NgbActiveModal) {
+    console.log('message from trimite', event);
+    if(event === 'valid') {
+      currentModal.close();
+    }
+  }
   
 	openFormModal(content: TemplateRef<any>) {
-    this.modalService.open(content, { size: 'lg', centered: true });
+    this.modalSvc.open(content, { size: 'lg', centered: true });
 	}
 }

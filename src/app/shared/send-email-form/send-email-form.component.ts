@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule, CommonModule]
 })
 export class FormComponent {
+
+  @Output() sendEmail: EventEmitter<string> = new EventEmitter();
 
   public form: FormGroup;
   public attemptSubmit = false;
@@ -38,10 +40,10 @@ export class FormComponent {
   submitForm(){
     this.attemptSubmit = true;
     
-    if(this.form.valid){
-      console.log('valid')
+    if(this.form.valid) {
+      this.sendEmail.emit('valid');
     } else {
-      console.log('invalid')
+      this.sendEmail.emit('invalid');
     }
   }
-}
+};

@@ -22,7 +22,7 @@
 </p>
 
 <!-- Modal -->
-<ng-template #content let-modal>
+<ng-template #content let-sendEmailModal>
 	<div class="modal-header border-0">
 		<h1 class="h3 modal-title border-bottom border-secondary">
 			Trimiteti un email
@@ -31,12 +31,12 @@
 			type="button" 
 			class="btn-close" 
 			aria-label="Close Modal" 
-			(click)="modal.dismiss('Cross click')"></button>
+			(click)="sendEmailModal.dismiss('Cross click')"></button>
 	</div>
 	<p class="p-3 display-8">
 		Si luam legatura in cel mai scurt timp
 	</p>
 	<div class="modal-body">
-		<app-send-email-form></app-send-email-form>
+		<app-send-email-form (sendEmail)="handleSendEmail($event, sendEmailModal)"></app-send-email-form>
 	</div>
 </ng-template>
