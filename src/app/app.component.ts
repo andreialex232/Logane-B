@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbDropdownModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-import { PhoneNumberService } from './shared/services/phone-number/phone-number.service';
+import { PhoneNumberService } from './services/phone-number.service';
 
 @Component({
   selector: 'app-root',

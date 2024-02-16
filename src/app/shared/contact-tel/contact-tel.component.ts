@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhoneNumberService } from 'src/app/shared/services/phone-number/phone-number.service';
+import { PhoneNumberService } from 'src/app/services/phone-number.service';
 
 @Component({
   selector: 'app-contact-tel',
