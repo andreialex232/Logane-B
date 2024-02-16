@@ -1,0 +1,14 @@
+.custom-logo {
+  width: 200px !important;
+  height: 50px !important;
+
+  @include media-breakpoint-up(sm) {
+    width: 250px !important;
+    height: 60px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 200px !important;
+    height: 44px !important;
+  }
+}
