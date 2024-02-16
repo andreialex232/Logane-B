@@ -1,18 +1,11 @@
 .header {
   background-image: url(../../assets/images/hero-dark-5616x3744.jpg);
-  height: 77vh;
+  height: 50vh;
   background-position: center 45%;
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media only screen and (max-width: 1200px) {
-    height: 550px;
-  }
-  @media only screen and (max-width: 576px) {
-    height: 450px;
-  }
-  @media only screen and (max-width: 339px) {
-    height: 400px;
-    background-position: 75%;
+  @include media-breakpoint-up(lg) { 
+    height: 77vh;
   }
 }

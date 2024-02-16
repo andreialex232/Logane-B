@@ -13,6 +13,7 @@ import { EmploymentComponent } from './employment/employment.component';
 import { GeneralInfoComponent } from './footer-info/general-info/general-info.component';
 import { FooterInfoHomeComponent } from './footer-info/footer-info-home/footer-info-home.component';
 import { LegalInfoComponent } from './footer-info/legal-info/legal-info.component';
+import { PartnersComponent } from './footer-info/partners/partners.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LegalInfoComponent } from './footer-info/legal-info/legal-info.componen
     EmploymentComponent,
     GeneralInfoComponent,
     FooterInfoHomeComponent,
-    LegalInfoComponent
+    LegalInfoComponent,
+    PartnersComponent
   ],
   imports: [
     CommonModule,

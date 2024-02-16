@@ -1,5 +1,5 @@
 <nav class="navbar bg-white navbar-expand-lg justify-content-center align-items-center">
-  <div class="container-fluid pe-6 ps-6 justify-content-center">
+  <div class="container-fluid pe-lg-6 ps-lg-6 pe-1 ps-1 justify-content-center">
     <div class="d-flex flex-column justify-content-center align-items-center">
     <div class="user-select-none mb-2 mb-lg-0">
       <a 
@@ -41,14 +41,14 @@
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="''" 
-            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Acasa</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Acasa</a>
         </li>
         <li 
           class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="'about'"
-            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Despre noi</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Despre noi</a>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <div 
@@ -60,7 +60,7 @@
             >
             <button
               type="button"
-              class="caret-off nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2"
+              class="caret-off nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black"
               id="dropdown"
               ngbDropdownToggle
               (focus)="myDrop.open()">
@@ -82,42 +82,42 @@
                   ngbDropdownItem
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/how-to-become-a-driver'"
-                  class="nav-link fw-semibold dropdown-menu-link">Cum devin sofer partener</a>
+                  class="nav-link dropdown-menu-link text-black">Cum devin sofer partener</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/fees'" 
-                  class="nav-link fw-semibold dropdown-menu-link">Comision fix sau variabil</a>
+                  class="nav-link dropdown-menu-link text-black">Comision fix sau variabil</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/checkout'" 
-                  class="nav-link fw-semibold dropdown-menu-link">Casa de marcat</a>
+                  class="nav-link dropdown-menu-link text-black">Casa de marcat</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/employment'" 
-                  class="nav-link fw-semibold dropdown-menu-link">Carte de munca</a>
+                  class="nav-link dropdown-menu-link text-black">Carte de munca</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/income'" 
-                  class="nav-link fw-semibold dropdown-menu-link">Venituri si cheltuieli sofer</a>
+                  class="nav-link dropdown-menu-link text-black">Venituri si cheltuieli sofer</a>
               </li>
               <li>
                 <a 
                   ngbDropdownItem 
                   (click)="onClickMenuItem()"
                   [routerLink]="'information/legal'" 
-                  class="nav-link fw-semibold dropdown-menu-link">OUG 49/2019</a>
+                  class="nav-link dropdown-menu-link text-black">OUG 49/2019</a>
               </li>
             </ul>
           </div>
@@ -127,12 +127,12 @@
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="'contact'"  
-            class="nav-link btn-link-nav fw-semibold pe-0 ps-0 pb-1 me-2">Contact</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Contact</a>
         </li>
         <li class="nav-item">
           <a 
             href="tel:{{tel}}" 
-            class="nav-link btn btn-secondary text-bg-primary fw-semibold ps-4 pe-4">Suna acum</a>
+            class="nav-link btn btn-secondary text-bg-primary ps-2 pe-2 ps-sm-4 pe-sm-4">Suna acum</a>
         </li>
       </ul>
     </div>
@@ -144,17 +144,17 @@
 <footer class="bg-dark text-center text-white">
   <menu class="list-unstyled navbar justify-content-center gap-4 gap-sm-5">
     <li class="nav-item">
-      <a class="nav-link btn-link-footer fw-semibold" routerLink="about">
+      <a class="nav-link btn-link-footer" routerLink="about">
         Despre noi
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link btn-link-footer fw-semibold" routerLink="information">
+      <a class="nav-link btn-link-footer" routerLink="information">
         Informatii
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link btn-link-footer fw-semibold" routerLink="contact">
+      <a class="nav-link btn-link-footer" routerLink="contact">
         Contact
       </a>
     </li>
