@@ -26,15 +26,15 @@ export class FormComponent {
   }
 
   get name() {
-    return this.form.get('name');
+    return this.form.get('name') as FormControl;
   }
 
   get email() {
-    return this.form.get('email');
+    return this.form.get('email') as FormControl;
   }
 
   get tel() {
-    return this.form.get('tel');
+    return this.form.get('tel') as FormControl;
   }
 
   submitForm(){

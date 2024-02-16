@@ -2,8 +2,11 @@
 <form 
   [formGroup]="form"
   class="needs-validation"
+  action="https://formspree.io/f/mdoqgljr"
+  method="POST"
   novalidate
   aria-label="Contact Form"
+  name="Contact Form"
   >
 
   <div class="row mb-4">
@@ -17,8 +20,9 @@
         autocomplete="name"
         aria-autocomplete="list"
         aria-required="true"
-        [ngClass]="{ 'is-invalid': attemptSubmit && name?.errors }"
-        formControlName="name"
+        [ngClass]="{ 'is-invalid': attemptSubmit && name.errors }"
+        [formControl]="name"
+        name="name"
         type="text" 
         class="form-control u-letter-spacing-1" 
         placeholder="Pop Adrian" 
@@ -50,8 +54,9 @@
         autocomplete="tel-local"
         aria-autocomplete="list"
         aria-required="true"
-        [ngClass]="{ 'is-invalid': attemptSubmit && tel?.errors }"
-        formControlName="tel"
+        [ngClass]="{ 'is-invalid': attemptSubmit && tel.errors }"
+        [formControl]="tel"
+        name="Telefon"
         type="tel"
         class="form-control u-letter-spacing-1" 
         placeholder="0745-235-622"
@@ -81,8 +86,9 @@
         autocomplete="email"
         aria-autocomplete="list"
         aria-required="true"
-        [ngClass]="{ 'is-invalid': attemptSubmit && email?.errors }"
-        formControlName="email"
+        [ngClass]="{ 'is-invalid': attemptSubmit && email.errors }"
+        [formControl]="email"
+        name="Email"
         type="email" 
         class="form-control u-letter-spacing-1" 
         placeholder="popadrian@yahoo.com"
