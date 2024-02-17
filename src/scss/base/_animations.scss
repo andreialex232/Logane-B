@@ -86,27 +86,31 @@
   }
 }
 
-@keyframes comeInHamburgerMenu {
+// HAMBURGER MENU KEYFRAMES
+
+@keyframes exitLeft-0 {
   0% {
-    opacity: 0;
-    transform: translateX(50px) scale(0.3);
+    opacity: 1;
+    transform: translateX(0px) scale(1);
   }
 
   100% {
-    opacity: 1;
-    transform: translateX(0px) scale(1);
+    opacity: 0;
+    transform: translateX(-50px) scale(0.1);
   }
 }
 
-@keyframes exitHamburgerMenu {
+
+
+@keyframes comeInRight-1 {
   0% {
-    opacity: 1;
-    transform: translateX(0px) scale(1);
+    opacity: 0;
+    transform: translateX(50px) scale(0.1);
   }
 
   100% {
-    opacity: 0;
-    transform: translateX(-50px) scale(0.3);
+    opacity: 1;
+    transform: translateX(0px) scale(1);
   }
 }
 
@@ -168,16 +172,16 @@
 
 // Mobile hamburger menu animations =======================
 
-.come-in-close-menu {
-  animation-name: comeInHamburgerMenu;
-  animation-duration: 0.2s;
+.come-in-right {
+  animation-name: comeInRight-1;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
 
-.exit-close-menu {
-  animation-name: exitHamburgerMenu;
-  animation-duration: 0.2s;
+.exit-left {
+  animation-name: exitLeft-0;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }

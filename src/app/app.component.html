@@ -12,16 +12,16 @@
       </div>
       <button 
         (click)="toggleMobileMenu()"
-        class="navbar-toggler border-0 shadow-none d-flex d-lg-none flex-column align-items-center justify-content-around p-0" 
+        class="position-relative navbar-toggler border-0 shadow-none d-flex d-lg-none flex-column align-items-center justify-content-around p-0" 
         type="button"
         id="mobileDropdown"
         data-bs-toggle="collapse"
         data-bs-target="#navDropdown"
         [ariaExpanded]="!isMenuCollapsed"
         aria-label="Toggle Navigation">
-        <div 
-          *ngIf="isMenuCollapsed"
-          class="menu-toggler-container d-flex flex-column justify-content-around align-items-center">
+        <div
+          id="open-icon-container"
+          class="position-absolute menu-toggler-container d-flex flex-column justify-content-around align-items-center">
           <span 
             class="icon-toggler">
           </span>
@@ -33,12 +33,8 @@
           </span>
         </div>
         <div
-          *ngIf="!isMenuCollapsed"
-          #closeMenu
           id="close-icon-container"
-          [ngClass]="{'come-in-close-menu': !isMenuCollapsed,
-                      'exit-close-menu': isMenuCollapsed}"
-          class="d-flex flex-column justify-content-around align-items-center close-icon-container">
+          class="opacity-0 position-absolute d-flex flex-column justify-content-around align-items-center close-icon-container">
           <span
             class="close-icon close-icon-1">
           </span>

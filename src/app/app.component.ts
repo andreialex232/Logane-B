@@ -21,5 +21,23 @@ export class AppComponent {
 
   public toggleMobileMenu(){
     this.isMenuCollapsed = !this.isMenuCollapsed;
+
+    const OPEN_MENU = document.getElementById('open-icon-container');
+    const CLOSE_MENU = document.getElementById('close-icon-container');
+
+    if(!this.isMenuCollapsed) {
+      OPEN_MENU?.classList.remove('come-in-right');
+      OPEN_MENU?.classList.add('exit-left');
+
+      CLOSE_MENU?.classList.remove('opacity-0');
+      CLOSE_MENU?.classList.remove('exit-left');
+      CLOSE_MENU?.classList.add('come-in-right');
+    } else {
+      OPEN_MENU?.classList.remove('exit-left');
+      OPEN_MENU?.classList.add('come-in-right');
+
+      CLOSE_MENU?.classList.remove('come-in-right');
+      CLOSE_MENU?.classList.add('exit-left');
+    }
   }
 }
