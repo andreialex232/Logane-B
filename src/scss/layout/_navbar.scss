@@ -19,32 +19,35 @@ nav.navbar > div > div > ul > li > div > button:focus {
   width: 100px;
 }
 
-.navbar-toggler {
+.navbar-toggler,
+.close-icon-container,
+.menu-toggler-container {
   width: 35px;
   height: 35px;
   position: relative;
-  transition: .5s ease-in-out;
 }
 
-.toggler-icon {
-  width: 35px;
+.icon-toggler {
+  width: 100%;
   height: 2px;
   background-color: black;
   display: block;
-  transition: all .2s ease-in-out;
-  transform-style: preserve-3d;
 }
 
-.top {
-  transform-origin: left;
-  transform: rotate(45deg);
+.close-icon {
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  
+  &-1 {
+    transform: rotate(45deg);
+  }
+
+  &-2 {
+    transform: rotate(-45deg);
+  }
 }
 
-.middle {
-  opacity: 0;
-}
-
-.bottom {
-  transform-origin: left;
-  transform: rotate(-45deg);
-}

@@ -1,33 +1,51 @@
 <nav class="navbar bg-white navbar-expand-lg justify-content-center align-items-center">
-  <div class="container-fluid pe-lg-6 ps-lg-6 pe-1 ps-1 justify-content-center">
+  <div class="container-fluid pe-lg-6 ps-lg-6 pe-1 ps-1 align-items-center justify-content-center">
     <div class="d-flex flex-column justify-content-center align-items-center">
-    <div class="user-select-none mb-2 mb-lg-0">
-      <a 
-        routerLink="" 
-        class="navbar-brand d-flex p-0">
-        <!-- <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40"> -->
-        <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo">
-        <!-- Logane -->
-      </a>
-    </div>
+      <div class="user-select-none mb-2 mb-lg-0">
+        <a 
+          routerLink="" 
+          class="navbar-brand d-flex p-0">
+          <!-- <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40"> -->
+          <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo">
+          <!-- Logane -->
+        </a>
+      </div>
       <button 
         (click)="toggleMobileMenu()"
-        class="navbar-toggler collapsed border-0 shadow-none d-flex d-lg-none flex-column justify-content-around p-0" 
+        class="navbar-toggler border-0 shadow-none d-flex d-lg-none flex-column align-items-center justify-content-around p-0" 
         type="button"
         id="mobileDropdown"
         data-bs-toggle="collapse"
         data-bs-target="#navDropdown"
-        [ariaExpanded]="isMenuCollapsed"
+        [ariaExpanded]="!isMenuCollapsed"
         aria-label="Toggle Navigation">
-        <span 
-          [ngClass]="{'top': !isMenuCollapsed}"
-          class="toggler-icon"></span>
-        <span
-          [ngClass]="{'middle': !isMenuCollapsed}"
-          class="toggler-icon"></span>
-        <span
-          [ngClass]="{'bottom': !isMenuCollapsed}"
-          class="toggler-icon"></span>
+        <div 
+          *ngIf="isMenuCollapsed"
+          class="menu-toggler-container d-flex flex-column justify-content-around align-items-center">
+          <span 
+            class="icon-toggler">
+          </span>
+          <span 
+            class="icon-toggler">
+          </span>
+          <span 
+            class="icon-toggler">
+          </span>
+        </div>
+        <div
+          *ngIf="!isMenuCollapsed"
+          #closeMenu
+          id="close-icon-container"
+          [ngClass]="{'come-in-close-menu': !isMenuCollapsed,
+                      'exit-close-menu': isMenuCollapsed}"
+          class="d-flex flex-column justify-content-around align-items-center close-icon-container">
+          <span
+            class="close-icon close-icon-1">
+          </span>
+          <span
+            class="close-icon close-icon-2">
+          </span>
+        </div>
       </button>
       </div>
     <div
