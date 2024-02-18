@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneralInfoComponent } from './general-info.component';
+import { GeneralInfoComponent } from './info-home-general-info';
 
 describe('GeneralInfoComponent', () => {
   let component: GeneralInfoComponent;

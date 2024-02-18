@@ -10,10 +10,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { IncomeComponent } from './income/income.component';
 import { LegalComponent } from './legal/legal.component';
 import { EmploymentComponent } from './employment/employment.component';
-import { GeneralInfoComponent } from './footer-info/general-info/general-info.component';
-import { FooterInfoHomeComponent } from './footer-info/footer-info-home/footer-info-home.component';
-import { LegalInfoComponent } from './footer-info/legal-info/legal-info.component';
-import { PartnersComponent } from './footer-info/partners/partners.component';
+import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-home-general-info';
+import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
+import { LegalInfoComponent } from './footer-info/info-home-legal-info/info-home-legal-info';
+import { PartnersComponent } from './footer-info/info-home-partners/info-home-partners';
 
 
 @NgModule({

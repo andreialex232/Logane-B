@@ -7,7 +7,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { EmploymentComponent } from './employment/employment.component';
 import { IncomeComponent } from './income/income.component';
 import { LegalComponent } from './legal/legal.component';
-import { FooterInfoHomeComponent } from './footer-info/footer-info-home/footer-info-home.component';
+import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 
 const routes: Routes = [
   { path: '', component: FooterInfoHomeComponent },

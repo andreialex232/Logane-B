@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterInfoHomeComponent } from './footer-info-home.component';
+import { FooterInfoHomeComponent } from './info-home.component';
 
 describe('FooterInfoHomeComponent', () => {
   let component: FooterInfoHomeComponent;
