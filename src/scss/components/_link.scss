@@ -28,3 +28,7 @@ $link-hover-color: $secondary;
     background-size: 100% !important; 
   }
 }
+
+.change-color-hover:hover {
+  color: $secondary !important;
+}

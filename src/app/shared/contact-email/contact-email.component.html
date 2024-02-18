@@ -1,4 +1,4 @@
-<img 
+<!-- <img 
 	class="contact-svg-size" 
 	src="assets/svg/mail_opened_re_i38e.svg"
 	alt="Image of an opened mail">
@@ -19,7 +19,31 @@
 		formularul
 	</button>
   si vom lua legatura cu voi in cel mai scurt timp
-</p>
+</p> -->
+<div class="text-center d-flex flex-column justify-content-center align-items-center">
+	<img 
+		src="../../../assets/svg/mail_opened_re_i38e.svg"
+		class="contact-svg-size">
+		<h3 class="mt-2 mb-2">
+			Prin email
+		</h3>
+		<p class="u-letter-spacing-1 display-8">
+			Puteti completa
+			<a
+				class="d-none d-lg-inline text-primary text-decoration-none change-color-hover"
+				role="button"
+				aria-haspopup="dialog"
+				(click)="openFormModal(content)"
+				>formularul
+			</a>
+			<a
+				class="d-lg-none text-primary text-decoration-none change-color-hover"
+				routerLink="contact"
+				>formularul
+			</a>
+			si vom lua legatura <br> in cel mai scurt timp
+		</p>
+</div>
 
 <!-- Modal -->
 <ng-template #content let-sendEmailModal>
