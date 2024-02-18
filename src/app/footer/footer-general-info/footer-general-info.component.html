@@ -1,0 +1,16 @@
+<div class="mb-4 mb-lg-0">
+  <h2 class="h3 border-bottom border-tertiary d-inline-block">
+    Informatii generale
+  </h2>
+  <menu class="navbar flex-column list-unstyled mb-0 mt-0">
+    <li 
+      class="mb-1"
+      *ngFor="let genItem of generalInfoItems">
+      <a
+        class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer"
+        routerLink="{{ genItem.link }}">
+        {{ genItem.heading }}
+      </a>
+    </li>
+  </menu>
+</div>

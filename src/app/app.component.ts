@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { NgbDropdownModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { PhoneNumberService } from './services/phone-number.service';
 
@@ -8,7 +8,7 @@ import { PhoneNumberService } from './services/phone-number.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'LoganeB';
+  title = 'CPM Rent Solutions';
 
   public tel = this.telSvc.tel;
   public isMenuCollapsed = true;
@@ -21,7 +21,7 @@ export class AppComponent {
 
   public toggleMobileMenu(){
     this.isMenuCollapsed = !this.isMenuCollapsed;
-
+/* 
     const OPEN_MENU = document.getElementById('open-icon-container');
     const CLOSE_MENU = document.getElementById('close-icon-container');
 
@@ -38,6 +38,7 @@ export class AppComponent {
 
       CLOSE_MENU?.classList.remove('come-in-right');
       CLOSE_MENU?.classList.add('exit-left');
-    }
+    } */
   }
+
 }

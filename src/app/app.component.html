@@ -17,9 +17,11 @@
         id="mobileDropdown"
         data-bs-toggle="collapse"
         data-bs-target="#navDropdown"
-        [ariaExpanded]="!isMenuCollapsed"
+        [attr.aria-expanded]="!isMenuCollapsed"
         aria-label="Toggle Navigation">
         <div
+          [ngClass]="{'exit-left': !isMenuCollapsed, 'come-in-right': isMenuCollapsed}"
+          #openMenuIcon
           id="open-icon-container"
           class="position-absolute menu-toggler-container d-flex flex-column justify-content-around align-items-center">
           <span 
@@ -33,8 +35,10 @@
           </span>
         </div>
         <div
+          #closeMenuIcon
+          [ngClass]="{'exit-left': isMenuCollapsed, 'come-in-right': !isMenuCollapsed}"
           id="close-icon-container"
-          class="opacity-0 position-absolute d-flex flex-column justify-content-around align-items-center close-icon-container">
+          class="position-absolute d-flex flex-column justify-content-around align-items-center close-icon-container">
           <span
             class="close-icon close-icon-1">
           </span>
@@ -155,25 +159,4 @@
 <main>
   <router-outlet></router-outlet>
 </main>
-<footer class="bg-dark text-center text-white">
-  <menu class="list-unstyled navbar justify-content-center gap-4 gap-sm-5">
-    <li class="nav-item">
-      <a class="nav-link btn-link-footer" routerLink="about">
-        Despre noi
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn-link-footer" routerLink="information">
-        Informatii
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn-link-footer" routerLink="contact">
-        Contact
-      </a>
-    </li>
-  </menu>
-  <p class="mb-n1 mt-n2 pb-3">
-    &copy; Copyright 2024 CPM Rent Solutions. Toate drepturile rezervate.
-  </p>
-</footer>
+<app-footer-home></app-footer-home>

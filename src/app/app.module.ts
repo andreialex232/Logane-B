@@ -10,6 +10,8 @@ import { HomeModule } from './home/home.module';
 import { ContactModule } from './contact/contact.module';
 import { InfoModule } from './info/info.module';
 import { AboutModule } from './about/about.module';
+import { FooterModule } from './footer/footer.module';
+
 
 
 
@@ -21,7 +23,7 @@ import { AboutModule } from './about/about.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
