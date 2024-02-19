@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule]
 })
-export class FormComponent {
+export class SendEmailFormComponent {
 
   @Output() sendEmail: EventEmitter<string> = new EventEmitter();
 

@@ -1,6 +1,6 @@
 import { Component, TemplateRef } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormComponent } from '../send-email-form/send-email-form.component';
+import { SendEmailFormComponent } from '../send-email-form/send-email-form.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './contact-email.component.html',
   styleUrls: ['./contact-email.component.scss'],
   standalone: true,
-  imports: [FormComponent, RouterLink]
+  imports: [SendEmailFormComponent, RouterLink]
 })
 export class ContactEmailComponent {
 

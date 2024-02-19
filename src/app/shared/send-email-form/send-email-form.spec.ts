@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormComponent } from './send-email-form.component';
+import { SendEmailFormComponent } from './send-email-form.component';
 
-describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+describe('SendEmailFormComponent', () => {
+  let component: SendEmailFormComponent;
+  let fixture: ComponentFixture<SendEmailFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FormComponent]
+      declarations: [SendEmailFormComponent]
     });
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(SendEmailFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -53,14 +53,11 @@
 		</h1>
 		<button 
 			type="button" 
-			class="btn-close" 
-			aria-label="Close Modal" 
+			class="btn-close"
+			aria-label="Close Modal"
 			(click)="sendEmailModal.dismiss('Cross click')"></button>
 	</div>
-	<p class="p-3 display-8">
-		Si luam legatura in cel mai scurt timp
-	</p>
 	<div class="modal-body">
-		<app-send-email-form (sendEmail)="handleSendEmail($event, sendEmailModal)"></app-send-email-form>
+		<app-send-email-form ngbAutofocus (sendEmail)="handleSendEmail($event, sendEmailModal)"></app-send-email-form>
 	</div>
 </ng-template>

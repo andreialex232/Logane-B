@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
-import { FormComponent } from '../shared/send-email-form/send-email-form.component';
+import { SendEmailFormComponent } from '../shared/send-email-form/send-email-form.component';
 import { ContactTelComponent } from '../shared/contact-tel/contact-tel.component';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
 
@@ -14,7 +14,7 @@ import { ContactInformationComponent } from './contact-information/contact-infor
   ],
   imports: [
     CommonModule,
-    FormComponent,
+    SendEmailFormComponent,
     ContactTelComponent
   ]
 })
