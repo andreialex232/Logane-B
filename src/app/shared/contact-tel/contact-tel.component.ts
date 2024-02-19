@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhoneNumberService } from 'src/app/services/phone-number.service';
+import { TEL_NUMBER } from 'src/core/constants.models';
 
 @Component({
   selector: 'app-contact-tel',
@@ -9,7 +9,7 @@ import { PhoneNumberService } from 'src/app/services/phone-number.service';
 })
 export class ContactTelComponent {
 
-  public tel = this.telSvc.tel;
+  public tel = TEL_NUMBER;
 
-  constructor(private telSvc: PhoneNumberService){}
+  constructor(){}
 }

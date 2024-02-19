@@ -1,0 +1,1 @@
+export const TEL_NUMBER: string = '112';

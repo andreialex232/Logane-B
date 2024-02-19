@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbDropdownModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-import { PhoneNumberService } from './services/phone-number.service';
+import { TEL_NUMBER } from 'src/core/constants.models';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,11 @@ import { PhoneNumberService } from './services/phone-number.service';
 export class AppComponent {
   title = 'CPM Rent Solutions';
 
-  public tel = this.telSvc.tel;
+  public tel = TEL_NUMBER;
   public isMenuCollapsed = true;
   public userOpenedMenu = false;
 
-  constructor(private telSvc: PhoneNumberService){}
+  constructor(){}
 
   onClickMenuItem() {
     this.isMenuCollapsed = true;
