@@ -1,0 +1,155 @@
+<nav class="navbar bg-white navbar-expand-lg justify-content-center align-items-center">
+  <div class="container-fluid pe-lg-6 ps-lg-6 pe-1 ps-1 align-items-center justify-content-center">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="user-select-none mb-2 mb-lg-0">
+        <a 
+          routerLink="" 
+          class="navbar-brand d-flex p-0">
+          <!-- <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40"> -->
+          <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo">
+          <!-- Logane -->
+        </a>
+      </div>
+      <button
+        (click)="toggleCollapse()"
+        class="preload top-drop position-relative navbar-toggler border-0 shadow-none d-flex d-lg-none flex-column align-items-center justify-content-around p-0" 
+        type="button"
+        id="mobileDropdown"
+        data-bs-toggle="collapse"
+        data-bs-target="#navDropdown"
+        [attr.aria-expanded]="!isMenuCollapsed"
+        aria-label="Toggle Navigation">
+        <div
+          [ngClass]="{'exit-left': !isMenuCollapsed && userOpenedMenu, 'come-in-right': isMenuCollapsed && userOpenedMenu}"
+          id="open-icon-container"
+          class="position-absolute menu-toggler-container d-flex flex-column justify-content-around align-items-center">
+          <span 
+            class="icon-toggler">
+          </span>
+          <span 
+            class="icon-toggler">
+          </span>
+          <span 
+            class="icon-toggler">
+          </span>
+        </div>
+        <div
+          [ngClass]="{'exit-left': isMenuCollapsed, 'come-in-right': !isMenuCollapsed, 'opacity-0': !userOpenedMenu}"
+          id="close-icon-container"
+          class="position-absolute d-flex flex-column justify-content-around align-items-center close-icon-container">
+          <span
+            class="close-icon close-icon-1">
+          </span>
+          <span
+            class="close-icon close-icon-2">
+          </span>
+        </div>
+      </button>
+      </div>
+    <div
+      [ngbCollapse]="isMenuCollapsed" 
+      class="collapse navbar-collapse"
+      aria-labelledby="mobileDropdown"
+      id="navDropdown">
+      <ul class="navbar-nav ms-auto align-items-center align-items-lg-stretch">
+        <li 
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
+          <a 
+            (click)="onClickMenuItem()"
+            [routerLink]="''" 
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Acasa</a>
+        </li>
+        <li 
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
+          <a 
+            (click)="onClickMenuItem()"
+            [routerLink]="'about'"
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Despre noi</a>
+        </li>
+        <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
+          <div 
+            class="d-inline-block d-flex justify-content-center align-items-center flex-column" 
+            ngbDropdown 
+            #myDrop="ngbDropdown"
+            (mouseover)="myDrop.open()"
+            (mouseleave)="myDrop.close()"
+            >
+            <button
+              type="button"
+              class="caret-off nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black"
+              id="dropdown"
+              ngbDropdownToggle
+              (focus)="myDrop.open()">
+              <div class="d-flex justify-content-center align-items-center gap-1">
+                Informatii
+                <img 
+                  [ngClass]="{ 'chevron-down-rotate': myDrop.isOpen() }"
+                  class="chevron-down-size"
+                  src="assets/svg/chevron-down.svg"
+                  alt="Chevron pointing down">
+              </div>
+            </button>
+            <ul
+              ngbDropdownMenu
+              class="dropdown-menu text-center m-auto">
+              <li>
+                <a
+                  ngbDropdownItem
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/how-to-become-a-driver'"
+                  class="nav-link dropdown-menu-link text-black">Cum devin sofer partener</a>
+              </li>
+              <li>
+                <a 
+                  ngbDropdownItem 
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/fees'" 
+                  class="nav-link dropdown-menu-link text-black">Comision fix sau variabil</a>
+              </li>
+              <li>
+                <a 
+                  ngbDropdownItem 
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/checkout'" 
+                  class="nav-link dropdown-menu-link text-black">Casa de marcat</a>
+              </li>
+              <li>
+                <a 
+                  ngbDropdownItem 
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/employment'" 
+                  class="nav-link dropdown-menu-link text-black">Carte de munca</a>
+              </li>
+              <li>
+                <a 
+                  ngbDropdownItem 
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/income'" 
+                  class="nav-link dropdown-menu-link text-black">Venituri si cheltuieli sofer</a>
+              </li>
+              <li>
+                <a 
+                  ngbDropdownItem 
+                  (click)="onClickMenuItem()"
+                  [routerLink]="'information/legal'" 
+                  class="nav-link dropdown-menu-link text-black">OUG 49/2019</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li
+          class="nav-item pe-lg-4 pb-1 pb-lg-0">
+          <a 
+            (click)="onClickMenuItem()"
+            [routerLink]="'contact'"  
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a 
+            href="tel:{{tel}}" 
+            class="nav-link btn btn-secondary text-bg-primary ps-2 pe-2 ps-sm-4 pe-sm-4">Suna acum</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
