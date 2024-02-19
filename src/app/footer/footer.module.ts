@@ -6,6 +6,7 @@ import { FooterGeneralInfoComponent } from './footer-general-info/footer-general
 import { FooterLegalInfoComponent } from './footer-legal-info/footer-legal-info.component';
 
 import { RouterLink } from '@angular/router';
+import { FooterRightsComponent } from './footer-rights/footer-rights.component';
 
 
 
@@ -14,7 +15,8 @@ import { RouterLink } from '@angular/router';
     FooterHomeComponent,
     FooterNavLinksComponent,
     FooterGeneralInfoComponent,
-    FooterLegalInfoComponent
+    FooterLegalInfoComponent,
+    FooterRightsComponent
   ],
   imports: [
     CommonModule,
