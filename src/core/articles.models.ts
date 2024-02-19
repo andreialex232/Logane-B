@@ -8,17 +8,17 @@ export const INFO_ARTICLES_GENERAL: IArticles[] = [
   {
     heading: 'Venituri si cheltuieli sofer',
     text: 'La ce venituri te poti astepta ca sofer partener',
-    link: 'income'
+    link: 'information/income'
   },
   {
     heading: 'Comision fix sau variabil',
     text: 'Ce alegem, comisionul fix sau variabil in colaborarea cu o Flota de ridesharing?',
-    link: 'fees'
+    link: 'information/fees'
   },
   {
     heading: 'Casa de marcat',
     text: 'Este colaborarea cu o Flota obligatorie sau necesara?',
-    link: 'checkout'
+    link: 'information/checkout'
   }
 ];
 
@@ -26,17 +26,17 @@ export const INFO_ARTICLES_LEGAL: IArticles[] = [
   {
     heading: 'Carte de munca',
     text: 'Ce variante avem pentru o colaborare legala cu companiile de ridesharing Uber si Bolt',
-    link: 'employment'
+    link: 'information/employment'
   },
   {
     heading: 'Cum devin sofer partener',
     text: 'Pasii pe care trebuie sa-i urmam pentru a deveni Sofer Partener Uber Bolt',
-    link: 'how-to-become-a-driver'
+    link: 'information/how-to-become-a-driver'
   },
   {
     heading: 'OUG 49/2019',
     text: 'Cat si cum putem deduce daca lucram ca PFA',
-    link: 'legal'
+    link: 'information/legal'
   }
 ];
 
