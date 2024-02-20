@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IArticles, INFO_ARTICLES_PARTNERS } from 'src/core/articles.models';
+import { IArticles, INFO_ARTICLES_PARTNERS } from 'src/core/models/info-articles.models';
 
 @Component({
   selector: 'app-info-home-partners',

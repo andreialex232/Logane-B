@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TEL_NUMBER } from 'src/core/constants.models';
+import { TEL_NUMBER } from 'src/core/constants/tel-number.constants';
 
 @Component({
   selector: 'app-nav-home',

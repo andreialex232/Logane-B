@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IArticles, INFO_ARTICLES_LEGAL } from 'src/core/articles.models';
+import { IArticles, INFO_ARTICLES_LEGAL } from 'src/core/models/info-articles.models';
 
 @Component({
   selector: 'app-info-home-legal-info',

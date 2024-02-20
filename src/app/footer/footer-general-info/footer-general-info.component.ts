@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { INFO_ARTICLES_GENERAL } from 'src/core/articles.models';
+import { INFO_ARTICLES_GENERAL } from 'src/core/models/info-articles.models';
 
 @Component({
   selector: 'app-footer-general-info',
