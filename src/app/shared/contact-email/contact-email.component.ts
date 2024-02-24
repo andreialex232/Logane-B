@@ -15,7 +15,6 @@ export class ContactEmailComponent {
   constructor(private modalSvc: NgbModal){}
 
   handleSendEmail(event: string, currentModal: NgbActiveModal) {
-    console.log('message from trimite', event);
     if(event === 'valid') {
       currentModal.close();
     }

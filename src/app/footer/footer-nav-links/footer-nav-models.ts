@@ -10,11 +10,11 @@ export const FOOTER_NAV_LINKS: IFooterNavLinks[] = [
   },
   {
     heading: 'Despre noi',
-    link: 'about',
+    link: 'despre-noi',
   },
   {
     heading: 'Informatii',
-    link: 'information',
+    link: 'informatii',
   },
   {
     heading: 'Contact',

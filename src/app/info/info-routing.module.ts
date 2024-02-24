@@ -10,13 +10,33 @@ import { LegalComponent } from './legal/legal.component';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 
 const routes: Routes = [
-  { path: '', component: FooterInfoHomeComponent },
-  { path: 'how-to-become-a-driver', title: 'Cum devin sofer partener', component: BecomeADriverComponent },
-  { path: 'fees', title: 'Comisioane', component: FeesComponent },
-  { path: 'checkout', title: 'Casa de marcat', component: CheckoutComponent },
-  { path: 'employment', title: 'Carte de munca', component: EmploymentComponent },
-  { path: 'income', title: 'Venituri si cheltuieli', component: IncomeComponent },
-  { path: 'legal', title: 'OUG 49/2019', component: LegalComponent },
+  { path: '',
+    component: FooterInfoHomeComponent
+  },
+  { path: 'cum-devin-sofer',
+    title: 'Cum devin sofer partener',
+    component: BecomeADriverComponent
+  },
+  { path: 'comisioane',
+    title: 'Comisioane',
+    component: FeesComponent
+  },
+  { path: 'casa-de-marcat',
+    title: 'Casa de marcat',
+    component: CheckoutComponent
+  },
+  { path: 'carte-de-munca',
+    title: 'Carte de munca',
+    component: EmploymentComponent
+  },
+  { path: 'venituri-si-cheltuieli',
+    title: 'Venituri si cheltuieli',
+    component: IncomeComponent
+  },
+  { path: 'legal',
+    title: 'OUG 49/2019',
+    component: LegalComponent
+  }
 ];
 
 @NgModule({
