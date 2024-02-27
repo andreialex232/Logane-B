@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TEL_NUMBER } from 'src/core/constants/tel-number.constants';
+import { TEL_NUMBER } from 'src/app/core/constants/tel-number.constants';
 
 @Component({
   selector: 'app-contact-tel',
