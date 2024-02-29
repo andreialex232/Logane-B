@@ -18,30 +18,46 @@
   }
 }
 
-.about-us-img {
-  background-image: url(../../assets/images/nordwood-themes-kRNZiGKtz48-unsplash.jpg);
+.about-us-hero {
+  background-image: none;
   background-repeat: no-repeat;
   background-size: contain;
   width: 700px;
   height: 460px;
+
+  @include media-breakpoint-up(lg) {
+    background-image: url(../../assets/images/about-us-hero-lg.jpg);
+  }
+
+  @include media-breakpoint-up(xl){
+    background-image: url(../../assets/images/about-us-hero-xxl.jpg)
+  }
 }
 
 .hero-bg {
-  background-image: url(../../assets/images/testhader2.jpg);
-  height: 77vh;
+  background-image: url(../../assets/images/home-hero-sm.jpg);
   background-color: rgba(0, 0, 0, .350);
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media only screen and (max-width: 1200px) {
-    height: 550px;
+  @include media-breakpoint-down(sm){
+    height: 70vh;
+    background-position: center;
   }
-  @media only screen and (max-width: 576px) {
-    height: 450px;
+  @include media-breakpoint-up(sm){
+    height: 68vh;
+    background-image: url(../../assets/images/home-hero-md.jpg);
   }
-  @media only screen and (max-width: 339px) {
-    height: 400px;
-    
+  @include media-breakpoint-up(lg){
+    height: 75vh;
+    background-image: url(../../assets/images/home-hero-lg.jpg);
+  }
+  @include media-breakpoint-up(xl){
+    height: 75vh;
+    background-image: url(../../assets/images/home-hero-xxl.jpg)
+  }
+  @media screen and (min-width: 1920px) {
+    height: 77vh;
   }
 }
