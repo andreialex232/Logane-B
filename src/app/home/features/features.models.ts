@@ -5,16 +5,16 @@ export interface IFeature {
 
 export const FEATURES: IFeature[] = [
   {
-    heading: 'Contracte',
-    text: 'Incepi sa castigi imediat ce actele au fost emise. Flota noastră colaborează doar cu PFA , II , IF SRL etc. Noi va putem ajuta, indruma sau chiar obtine documentatia necesara deschiderii unui PFA.'
+    heading: 'Fără constrângeri de birou sau supervizare',
+    text: 'În cadrul activității de Transport Alternativ, te bucuri de libertatea de a lucra fără constrângeri de spațiu sau supraveghere directă din partea unui superior. Este o oportunitate pentru tine să-ți gestionezi propriul program și să te implici atunci când dorești, pentru obținerea unor venituri suplimentare.'
   },
   {
-    heading: 'Cand poti sa incepi',
-    text: 'Ca sofer de transport alternativ in Romania incepi sa castigi imediat ce actele au fost emise. Flota noastra activeaza deja in 4 orase din Romania: Bucuresti, Pitesti , Buzau si Constanta, urmand sa activam si in restul oraselor din tara.' 
+    heading: 'Legalitate și transparență deplină',
+    text: 'Colaborarea noastră se desfășoară exclusiv într-un cadru legal și transparent. Toți colaboratorii beneficiază de contracte de muncă, convenții și acorduri de închiriere auto, asigurând astfel că fiecare aspect al activității este conform legislației și fără riscuri nejustificate.' 
   },
   {
-    heading: 'Venituri',
-    text: 'Pentru aceasta activitate veniturile depind doar de timpul alocat de catre dumneavoastra pentru aceasta activitate. Nu aveți limitat și nici restricții din partea noastră. Un program de lucru normal , iti va aduce venituri considerabile . Conduceti cat doriti.' 
+    heading: 'Oportunitate de a câștiga',
+    text: 'Deții o mașină? Ai posibilitatea de a câștiga până la 8000 de lei lunar. Într-un oraș aglomerat, aceasta este o oportunitate reală pentru tine să obții venituri substanțiale, beneficiind de cererea crescută pentru serviciile de transport.' 
   },
   {
     heading: 'Marime',
