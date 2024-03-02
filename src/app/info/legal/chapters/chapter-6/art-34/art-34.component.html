@@ -1,0 +1,24 @@
+<section class="mt-4">
+  <h3 class="h4">
+    Articolul 34
+  </h3>
+  <figure>
+    <figcaption class="mb-2">
+      Constituie contravenție, dacă potrivit legii penale fapta nu constituie infracțiune, și se sancționează cu amendă de la 1.000 lei la 5.000 lei următoarele fapte ale conducătorului auto:
+    </figcaption>
+    <ul class="list-unstyled card">
+      <div
+        class="list-group list-group-flush"
+        *ngFor="let contravention of art34Contravention">
+        <div class="list-group-item">
+          <span class="text-secondary">
+            {{ contravention.letter }}
+          </span>
+          <li>
+            {{ contravention.text }}
+          </li>
+        </div>
+      </div>
+    </ul>
+  </figure>
+</section>

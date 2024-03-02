@@ -1,0 +1,24 @@
+<section class="mt-4">
+  <h3 class="h4">
+    Articolul 7
+  </h3>
+  <figure>
+    <figcaption class="mb-2">
+      Pentru a obține avizul tehnic, platforma digitală pentru intermedierea transportului alternativ trebuie să îndeplinească cumulativ următoarele condiții:
+    </figcaption>
+    <ul class="list-unstyled card">
+      <div
+        class="list-group list-group-flush"
+        *ngFor="let condition of art13Cond">
+        <div class="list-group-item">
+          <span class="text-secondary">
+            {{ condition.letter }}
+          </span>
+          <li>
+            {{ condition.text }}
+          </li>
+        </div>
+      </div>
+    </ul>
+  </figure>
+</section>

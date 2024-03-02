@@ -1,0 +1,24 @@
+<section class="mt-4">
+  <h3 class="h4">
+    Articolul 28
+  </h3>
+  <figure>
+    <figcaption class="mb-2">
+      Conducătorul auto care efectuează transport alternativ trebuie să îndeplinească în mod cumulativ următoarele condiții:
+    </figcaption>
+    <ul class="list-unstyled card">
+      <div
+        class="list-group list-group-flush"
+        *ngFor="let obligation of art28DriverObl">
+        <div class="list-group-item">
+          <span class="text-secondary">
+            {{ obligation.letter }}
+          </span>
+          <li>
+            {{ obligation.text }}
+          </li>
+        </div>
+      </div>
+    </ul>
+  </figure>
+</section>

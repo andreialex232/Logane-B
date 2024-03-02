@@ -1,0 +1,27 @@
+<section class="mt-4">
+  <h3 class="h4">
+    Articolul 15
+  </h3>
+  <p>
+    (1) Retragerea autorizației de transport alternativ se realizează de către autoritatea de autorizare și are drept consecință pierderea calității de operator de transport alternativ autorizat, precum și retragerea tuturor copiilor conforme eliberate pe baza autorizației respective.
+  </p>
+  <figure>
+    <figcaption class="mb-2">
+      (1) Pentru fiecare autoturism deținut în proprietate, închiriere, comodat, contract de leasing și utilizat în vederea efectuării transportului alternativ, agenția teritorială a Autorității Rutiere Române - A.R.R., emitentă a autorizației de transport alternativ, eliberează operatorului de transport alternativ, în termen de 15 zile lucrătoare de la înregistrarea cererii, câte o copie conformă a acesteia, după depunerea următoarelor documente, în copie:
+    </figcaption>
+    <ul class="list-unstyled card">
+      <div
+        class="list-group list-group-flush"
+        *ngFor="let item of art15Wd">
+        <div class="list-group-item">
+          <span class="text-secondary">
+            {{ item.letter }}
+          </span>
+          <li>
+            {{ item.text }}
+          </li>
+        </div>
+      </div>
+    </ul>
+  </figure>
+</section>

@@ -1,0 +1,66 @@
+<section class="mt-4">
+  <h3 class="h4">
+    Articolul 12
+  </h3>
+  <figure>
+    <figcaption class="mb-2">
+      (1) În vederea obținerii autorizației pentru transportul alternativ operatorul de transport alternativ depune la agenția teritorială a Autorității Rutiere Române - A.R.R. din județul sau municipiul București unde își are sediul sau domiciliul, după caz, următoarele documente, prin care dovedește îndeplinirea condițiilor prevăzute de prezenta ordonanță de urgență:
+    </figcaption>
+    <ul class="list-unstyled card">
+      <div
+        class="list-group list-group-flush"
+        *ngFor="let art of art12Art">
+        <div class="list-group-item">
+          <span class="text-secondary">
+            {{ art.mark }}
+          </span>
+          <li>
+            {{ art.text }}
+          </li>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item">
+            <span class="text-secondary">
+              F.
+            </span>
+            <li>
+              <figure>
+                <figcaption>
+                  Certificatul de cazier judiciar al conducătorilor auto și, după caz, al managerului de transport alternativ, din care să rezulte că aceștia nu au fost condamnați pentru:
+                </figcaption>
+              </figure>
+              <ul class="list-unstyled text-center">
+                <div
+                  class="d-flex justify-content-center align-items-center mt-4"
+                  *ngFor="let infr of art12Infr">
+                  <span class="text-secondary">
+                    {{ infr.mark }} 
+                  </span>
+                  &nbsp;
+                  <li>
+                    {{ infr.text }}
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </figure>
+  <p>
+    Cazierul judiciar al managerului de transport alternativ se depune în cazul persoanei juridice
+  </p>
+  <p>
+    (2) Autorizația de transport alternativ se eliberează, în termen de maximum 15 zile lucrătoare de la înregistrarea cererii, de către agenția teritorială a Autorității Rutiere Române - A.R.R. competentă pentru o perioadă de 3 ani după plata de către operatorul de transport alternativ a unui tarif de 300 lei, achitat în contul acesteia
+  </p>
+  <p>
+    (3) Autorizația de transport alternativ eliberată operatorului de transport alternativ conform alin. (2) este netransmisibilă.
+  </p>
+  <p>
+    (4) Operatorul de transport alternativ autorizat are obligația să comunice agenției teritoriale a Autorității Rutiere Române - A.R.R. emitente orice modificare a datelor și informațiilor cuprinse în documentele prevăzute la alin. (1), printr-o declarație pe propria răspundere, într-un termen de maximum 15 zile de la data modificărilor respective
+  </p>
+</section>
