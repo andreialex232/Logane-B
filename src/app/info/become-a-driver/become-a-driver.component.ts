@@ -8,6 +8,6 @@ import { DRIVER_REQUIREMENTS } from './driver-requirements.models';
 })
 export class BecomeADriverComponent {
 
-  public requirements = DRIVER_REQUIREMENTS;
+  public driverRequirements = DRIVER_REQUIREMENTS;
 
 }

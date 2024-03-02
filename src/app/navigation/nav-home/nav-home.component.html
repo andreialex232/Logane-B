@@ -92,47 +92,13 @@
             <ul
               ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
-              <li>
+              <li
+                *ngFor="let dropItem of dropdownItems">
                 <a
                   ngbDropdownItem
                   (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/cum-devin-sofer'"
-                  class="nav-link dropdown-menu-link text-black">Cum devin sofer partener</a>
-              </li>
-              <li>
-                <a 
-                  ngbDropdownItem 
-                  (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/comisioane'" 
-                  class="nav-link dropdown-menu-link text-black">Comision fix sau variabil</a>
-              </li>
-              <li>
-                <a 
-                  ngbDropdownItem 
-                  (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/casa-de-marcat'" 
-                  class="nav-link dropdown-menu-link text-black">Casa de marcat</a>
-              </li>
-              <li>
-                <a 
-                  ngbDropdownItem 
-                  (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/carte-de-munca'" 
-                  class="nav-link dropdown-menu-link text-black">Carte de munca</a>
-              </li>
-              <li>
-                <a 
-                  ngbDropdownItem 
-                  (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/venituri-si-cheltuieli'" 
-                  class="nav-link dropdown-menu-link text-black">Venituri si cheltuieli sofer</a>
-              </li>
-              <li>
-                <a 
-                  ngbDropdownItem 
-                  (click)="onClickMenuItem()"
-                  [routerLink]="'informatii/legal'" 
-                  class="nav-link dropdown-menu-link text-black">OUG 49/2019</a>
+                  routerLink="{{dropItem.link}}"
+                  class="nav-link dropdown-menu-link text-black">{{ dropItem.name }}</a>
               </li>
             </ul>
           </div>

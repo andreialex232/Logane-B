@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IArticles, INFO_ARTICLES_GENERAL } from 'src/app/core/models/info-articles.models';
+import { INFO_ARTICLES_GENERAL } from 'src/app/core/models/info-articles.models';
 
 @Component({
   selector: 'app-info-home-general-info',
@@ -8,6 +8,6 @@ import { IArticles, INFO_ARTICLES_GENERAL } from 'src/app/core/models/info-artic
 })
 export class GeneralInfoComponent {
 
-  public generalInformationItems: IArticles[] = INFO_ARTICLES_GENERAL;
+  public generalInformationItems = INFO_ARTICLES_GENERAL;
 
 }

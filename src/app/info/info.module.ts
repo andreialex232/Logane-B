@@ -16,6 +16,7 @@ import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 import { LegalInfoComponent } from './footer-info/info-home-legal-info/info-home-legal-info';
 import { PartnersComponent } from './footer-info/info-home-partners/info-home-partners';
+import { PersonalCarDriverComponent } from './personal-car-driver/personal-car-driver.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PartnersComponent } from './footer-info/info-home-partners/info-home-pa
     GeneralInfoComponent,
     FooterInfoHomeComponent,
     LegalInfoComponent,
-    PartnersComponent
+    PartnersComponent,
+    PersonalCarDriverComponent
   ],
   imports: [
     CommonModule,

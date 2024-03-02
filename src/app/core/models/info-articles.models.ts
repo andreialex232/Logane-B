@@ -34,6 +34,11 @@ export const INFO_ARTICLES_LEGAL: IArticles[] = [
     link: 'informatii/cum-devin-sofer'
   },
   {
+    heading: 'Sofer partener cu masina personala',
+    text: 'Afla cum poti devenii sofer partner cu propria masina',
+    link: 'informatii/sofer-partener-cu-masina-personala'
+  },
+  {
     heading: 'OUG 49/2019',
     text: 'Cat si cum putem deduce daca lucram ca PFA',
     link: 'informatii/legal'

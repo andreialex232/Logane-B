@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IArticles, INFO_ARTICLES_LEGAL } from 'src/app/core/models/info-articles.models';
+import { INFO_ARTICLES_LEGAL } from 'src/app/core/models/info-articles.models';
 
 @Component({
   selector: 'app-info-home-legal-info',
@@ -8,6 +8,6 @@ import { IArticles, INFO_ARTICLES_LEGAL } from 'src/app/core/models/info-article
 })
 export class LegalInfoComponent {
 
-  public legalInformationItems: IArticles[] = INFO_ARTICLES_LEGAL;
+  public legalInformationItems = INFO_ARTICLES_LEGAL;
 
 }

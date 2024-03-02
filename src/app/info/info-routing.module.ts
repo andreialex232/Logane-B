@@ -8,6 +8,7 @@ import { EmploymentComponent } from './employment/employment.component';
 import { IncomeComponent } from './income/income.component';
 import { LegalComponent } from './legal/legal.component';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
+import { PersonalCarDriverComponent } from './personal-car-driver/personal-car-driver.component';
 
 const routes: Routes = [
   { path: '',
@@ -16,6 +17,11 @@ const routes: Routes = [
   { path: 'cum-devin-sofer',
     title: 'Cum devin sofer partener',
     component: BecomeADriverComponent
+  },
+  {
+    path: 'sofer-partener-cu-masina-personala',
+    title: 'Cum devin sofer partener cu masina personala',
+    component: PersonalCarDriverComponent
   },
   { path: 'comisioane',
     title: 'Comisioane',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IArticles, INFO_ARTICLES_PARTNERS } from 'src/app/core/models/info-articles.models';
+import { INFO_ARTICLES_PARTNERS } from 'src/app/core/models/info-articles.models';
 
 @Component({
   selector: 'app-info-home-partners',
@@ -8,6 +8,6 @@ import { IArticles, INFO_ARTICLES_PARTNERS } from 'src/app/core/models/info-arti
 })
 export class PartnersComponent {
 
-  parteners: IArticles[] = INFO_ARTICLES_PARTNERS;
+  parteners = INFO_ARTICLES_PARTNERS;
 
 }

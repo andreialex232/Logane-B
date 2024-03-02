@@ -1,3 +1,11 @@
 .footer {
   min-height: 36vh;
 }
+
+.footer-legal-links-container {
+  max-width: none;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 216px;
+  }
+}
