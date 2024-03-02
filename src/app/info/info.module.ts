@@ -4,6 +4,8 @@ import { RouterLink } from '@angular/router';
 
 import { InfoRoutingModule } from './info-routing.module';
 
+import { SendEmailFormComponent } from '../shared/send-email-form/send-email-form.component';
+
 import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
 import { FeesComponent } from './fees/fees.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -31,7 +33,8 @@ import { PartnersComponent } from './footer-info/info-home-partners/info-home-pa
   ],
   imports: [
     CommonModule,
-    InfoRoutingModule
+    InfoRoutingModule,
+    SendEmailFormComponent
   ]
 })
 export class InfoModule { }
