@@ -17,15 +17,15 @@ export const FEATURES: IFeature[] = [
     text: 'Deții o mașină? Ai posibilitatea de a câștiga până la 8000 de lei lunar. Într-un oraș aglomerat, aceasta este o oportunitate reală pentru tine să obții venituri substanțiale, beneficiind de cererea crescută pentru serviciile de transport.' 
   },
   {
-    heading: 'Marime',
-    text: 'Flota noastra este autorizata de catre Autoritatea Rutiera Romana ca operator de transport alternativ ,conform reglementarilor in vigoare. Administram conturile soferilor parteneri si oferim suport permanent pentru activitatea de transport alternativ .' 
+    heading: 'Contract de muncă',
+    text: 'Fie că ai sau nu o mașină personală, noi îți oferim un contract de muncă cu ore definite (4 sau 8 ore), astfel încât să ai stabilitate și predictibilitate în programul tău de lucru.' 
   },
   { 
-    heading: 'Prezenti peste tot',
-    text: 'Suntem prezenti in Bucuresti , Buzau , Pitesti si Constanta. In viitor planuim deschiderea si in restul oraselor din Romania , unde serviciul de Ride-Sharing este disponibil astfel incat sa oferim servicii de calitate indiferent de orasul in care locuiesti.' 
+    heading: 'Conformitate legală',
+    text: 'Ne asigurăm că toți șoferii noștri beneficiază de protecția legală și de drepturile lucrătorilor, respectând legislația muncii în vigoare.' 
   },
   {
-    heading: 'Invita si castiga',
-    text: 'Prezinta flota noastra prietenilor si castiga 200 de lei ! Acest bonus se acorda fiecarui sofer nou si nu exista un numar limitat de recomandari , poti aduce cate persoane noi vrei .' 
+    heading: 'Flexibilitate',
+    text: 'Ai posibilitatea să alegi numărul de ore de lucru în funcție de nevoile tale.' 
   }
 ];
