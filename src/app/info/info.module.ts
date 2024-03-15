@@ -69,6 +69,8 @@ import { PersonalCarDriverRequirementsComponent } from './personal-car-driver/pe
 import { BecomeADriverHomeComponent } from './become-a-driver/become-a-driver-home/become-a-driver-home.component';
 import { BecomeADriverReqComponent } from './become-a-driver/become-a-driver-req/become-a-driver-req.component';
 import { PersonalCarDriverCarConditionComponent } from './personal-car-driver/personal-car-driver-car-condition/personal-car-driver-car-condition.component';
+import { BenefitsHomeComponent } from './benefits/benefits-home/benefits-home.component';
+import { BenefitsListComponent } from './benefits/benefits-list/benefits-list.component';
 
 
 @NgModule({
@@ -136,6 +138,8 @@ import { PersonalCarDriverCarConditionComponent } from './personal-car-driver/pe
     BecomeADriverHomeComponent,
     BecomeADriverReqComponent,
     PersonalCarDriverCarConditionComponent,
+    BenefitsHomeComponent,
+    BenefitsListComponent,
   ],
   imports: [
     CommonModule,

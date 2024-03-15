@@ -6,6 +6,7 @@ import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.compo
 import { FeesHomeComponent } from './fees/fees-home/fees-home.component';
 import { BecomeADriverHomeComponent } from './become-a-driver/become-a-driver-home/become-a-driver-home.component';
 import { PersonalCarDriverHomeComponent } from './personal-car-driver/personal-car-driver-home/personal-car-driver-home.component';
+import { BenefitsHomeComponent } from './benefits/benefits-home/benefits-home.component';
 
 const routes: Routes = [
   { path: '',
@@ -27,6 +28,11 @@ const routes: Routes = [
   { path: 'legal',
     title: 'OUG 49/2019',
     component: LegalComponent
+  },
+  {
+    path: 'ce-oferim',
+    title: 'Ce Oferim',
+    component: BenefitsHomeComponent
   }
 ];
 

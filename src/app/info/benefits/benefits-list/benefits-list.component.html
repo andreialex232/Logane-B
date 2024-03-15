@@ -1,0 +1,21 @@
+<section>
+  <div class="pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5 mb-5">
+    <h2 class="h3 lh-base border-bottom border-secondary d-inline">
+      Oferim urmatoarele:
+    </h2>
+  </div>
+  <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+    <ul class="list-unstyled">
+      <div
+        class="d-flex align-items-center justify-content-start mt-4"
+        *ngFor="let benefit of benefitList">
+        <span class="list-span text-white position-relative me-4">
+          {{ benefit.number }}
+        </span>
+        <li class="text-start">
+          {{ benefit.text }}
+        </li>
+      </div>
+    </ul>
+  </div>
+</section>

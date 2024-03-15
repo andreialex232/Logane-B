@@ -17,6 +17,10 @@ export const INavDropdownItems: INavDropdown[] = [
     link: "informatii/venituri-cheltuieli-comisioane"
   },
   {
+    name: 'Ce oferim',
+    link: "informatii/ce-oferim"
+  },
+  {
     name: 'OUG 49/2019',
     link: "informatii/legal"
   },

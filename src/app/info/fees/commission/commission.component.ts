@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { COMMISSION } from 'src/app/core/models/info-models/fees-models/commission.models';
+import { COMMISSION } from 'src/app/core/models/info-models/fees/commission.models';
 
 @Component({
   selector: 'app-commission',
