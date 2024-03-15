@@ -13,20 +13,8 @@ export const INavDropdownItems: INavDropdown[] = [
     link: "informatii/sofer-partener-cu-masina-personala"
   },
   {
-    name: 'Comision fix sau variabil',
-    link: "informatii/comisioane"
-  },
-  {
-    name: 'Casa de marcat',
-    link: "informatii/casa-de-marcat"
-  },
-  {
-    name: 'Carte de munca',
-    link: "informatii/carte-de-munca"
-  },
-  {
-    name: 'Venituri si cheltuieli sofer',
-    link: "informatii/venituri-si-cheltuieli"
+    name: 'Venituri, cheltuieli si comisioane',
+    link: "informatii/venituri-cheltuieli-comisioane"
   },
   {
     name: 'OUG 49/2019',

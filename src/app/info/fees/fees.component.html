@@ -1,1 +1,82 @@
-<p>fees works!</p>
+<article class="text-center text-md-start">
+  <div class="information-bg d-flex justify-content-center align-items-center text-white">
+    <h1 class="h2 pt-lg-5 pb-lg-5 pt-2 pb-2">
+      Venituri, cheltuieli si comisioane
+    </h1>
+  </div>
+
+  <p class="h4 u-letter-spacing-1 text-center mt-4">
+    Veniturile variază în funcție de timpul muncit. Dacă mai aveți un job, contractul se va putea face part-time (4h).
+  </p>
+
+  <section>
+    <div class="pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5">
+      <h2 class="h3 lh-base border-bottom border-secondary d-inline">
+        Cheltuieli
+      </h2>
+    </div>
+    <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+      <ul class="list-unstyled">
+        <div 
+          class="d-flex align-items-center justify-content-start mt-4"
+          *ngFor="let cost of outgoings">
+          <span class="list-span text-white position-relative me-4">
+            {{ cost.number }}
+          </span>
+          <li class="text-start">
+            {{ cost.text }}
+          </li>
+        </div>
+      </ul>
+      <div class="mt-4">
+        <p>
+          Taxa include toate serviciile operaționale (contabilitate, casă de marcat, ecusoane, adeverințe salariat, protecția muncii, comisioane plați)
+        </p>
+        <p>
+          Contravaloarea copiei conforme si a ecusonului - 120 ron. Banii se vor scadea din prima lună de activitate a șoferului
+        </p>
+        <p>
+          Contractul de comodat pentru mașină (dacă este cazul) – 180 Ron
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5">
+      <h2 class="h3 lh-base border-bottom border-secondary d-inline">
+        Comisionul flotei
+      </h2>
+    </div>
+    <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+      <ul class="list-unstyled">
+        <li 
+          class="mb-4"
+          *ngFor="let cut of commission">
+          {{ cut.text }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5">
+      <h2 class="h3 lh-base border-bottom border-secondary d-inline">
+        Casa de Marcat Fiscalizată
+      </h2>
+    </div>
+    <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+      <p>
+        <span class="text-primary">GRATUIT</span> la masinile noastre. Aceasta este propietatea noastră iar șoferul are obligația de a o preda odata cu mașina în cazul întreruperii contractului de muncă.
+      </p>
+      <p>
+        Șoferii cu mașină personală care nu au o Casa de Marcat Fiscalizată vor achita valoarea acesteia. Casa de marcat va rămâne propietatea șoferului.
+      </p>
+    </div>
+  </section>
+
+  <p class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1 text-center">
+    <strong>Pentru a asigura conformitatea cu reglementările legale și pentru a oferi transparență și siguranță, oferim întotdeauna un contract de muncă cu ore definite (8h sau 4h pentru cei care au un al doilea loc de muncă).</strong>
+  </p>
+</article>

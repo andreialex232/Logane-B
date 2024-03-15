@@ -8,10 +8,7 @@ import { SendEmailFormComponent } from '../shared/send-email-form/send-email-for
 
 import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
 import { FeesComponent } from './fees/fees.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { IncomeComponent } from './income/income.component';
 import { LegalComponent } from './legal/legal.component';
-import { EmploymentComponent } from './employment/employment.component';
 import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-home-general-info';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 import { LegalInfoComponent } from './footer-info/info-home-legal-info/info-home-legal-info';
@@ -72,10 +69,7 @@ import { SubTitleComponent } from './legal/sub-title/sub-title.component';
   declarations: [
     BecomeADriverComponent,
     FeesComponent,
-    CheckoutComponent,
-    IncomeComponent,
     LegalComponent,
-    EmploymentComponent,
     GeneralInfoComponent,
     FooterInfoHomeComponent,
     LegalInfoComponent,

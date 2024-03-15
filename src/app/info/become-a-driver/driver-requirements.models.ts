@@ -1,4 +1,4 @@
-import { IDriverReq } from "src/app/core/interfaces/driver.requirements.models";
+import { IDriverReq } from "src/app/core/interfaces/driver-requirements.models";
 
 export const DRIVER_REQUIREMENTS: IDriverReq[] = [
   {

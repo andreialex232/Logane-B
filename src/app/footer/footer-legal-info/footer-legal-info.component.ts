@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { INFO_ARTICLES_LEGAL } from 'src/app/core/models/info-articles.models';
+import { INFO_ARTICLES_LEGAL } from 'src/app/core/models/footer-models/info-articles.models';
 
 @Component({
   selector: 'app-footer-legal-info',
