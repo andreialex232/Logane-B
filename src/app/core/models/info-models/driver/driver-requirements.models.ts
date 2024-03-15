@@ -1,6 +1,7 @@
-import { IDriverReq } from "src/app/core/interfaces/driver-requirements.models";
+import { IlistNumber } from "src/app/core/interfaces/unordered-list.models";
 
-export const DRIVER_REQUIREMENTS: IDriverReq[] = [
+
+export const DRIVER_REQUIREMENTS: IlistNumber[] = [
   {
     number: 1,
     text: 'Să deții un permis de conducere categoria B cu minimum 2 ani de vechime.'

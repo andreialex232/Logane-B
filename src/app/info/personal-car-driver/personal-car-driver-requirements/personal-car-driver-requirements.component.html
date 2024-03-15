@@ -1,0 +1,19 @@
+<article>
+  <h2 class="h3 pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5">
+    Pentru a deveni șofer Uber/Bolt cu mașina personală, trebuie să îndeplinești următoarele criterii:
+  </h2>
+  <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+    <ul class="list-unstyled">
+      <div
+        class="d-flex align-items-center justify-content-start mt-4"
+        *ngFor="let req of personalCarDriverRequirements">
+        <span class="list-span text-white position-relative me-4">
+          {{ req.number }}
+        </span>
+        <li class="text-start">
+          {{ req.text }}
+        </li>
+      </div>
+    </ul>
+  </div>
+</article>

@@ -1,11 +1,11 @@
-import { IDriverReq } from "src/app/core/interfaces/driver-requirements.models";
+import { IlistNumber } from "src/app/core/interfaces/unordered-list.models";
 
 export interface ICarCondition {
   title: string;
   text: string;
 }
 
-export const PERSONAL_VEHICLE_REQUIREMENTS: IDriverReq[] = [
+export const PERSONAL_VEHICLE_REQUIREMENTS: IlistNumber[] = [
   {
     number: 1,
     text: 'PFA (dacă nu ai încă un PFA te putem îndruma noi) sau SRL.'

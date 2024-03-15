@@ -6,13 +6,11 @@ import { InfoRoutingModule } from './info-routing.module';
 
 import { SendEmailFormComponent } from '../shared/send-email-form/send-email-form.component';
 
-import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
 import { LegalComponent } from './legal/legal.component';
 import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-home-general-info';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 import { LegalInfoComponent } from './footer-info/info-home-legal-info/info-home-legal-info';
 import { PartnersComponent } from './footer-info/info-home-partners/info-home-partners';
-import { PersonalCarDriverComponent } from './personal-car-driver/personal-car-driver.component';
 import { Art12Component } from './legal/chapters/chapter-3/art-12/art-12.component';
 import { Art13Component } from './legal/chapters/chapter-3/art-13/art-13.component';
 import { IntroComponent } from './legal/intro/intro.component';
@@ -66,17 +64,20 @@ import { CommissionComponent } from './fees/commission/commission.component';
 import { FeesHomeComponent } from './fees/fees-home/fees-home.component';
 import { CheckoutComponent } from './fees/checkout/checkout.component';
 import { ExpendituresComponent } from './fees/expenditures/expenditures.component';
+import { PersonalCarDriverHomeComponent } from './personal-car-driver/personal-car-driver-home/personal-car-driver-home.component';
+import { PersonalCarDriverRequirementsComponent } from './personal-car-driver/personal-car-driver-requirements/personal-car-driver-requirements.component';
+import { BecomeADriverHomeComponent } from './become-a-driver/become-a-driver-home/become-a-driver-home.component';
+import { BecomeADriverReqComponent } from './become-a-driver/become-a-driver-req/become-a-driver-req.component';
+import { PersonalCarDriverCarConditionComponent } from './personal-car-driver/personal-car-driver-car-condition/personal-car-driver-car-condition.component';
 
 
 @NgModule({
   declarations: [
-    BecomeADriverComponent,
     LegalComponent,
     GeneralInfoComponent,
     FooterInfoHomeComponent,
     LegalInfoComponent,
     PartnersComponent,
-    PersonalCarDriverComponent,
     Art12Component,
     Art13Component,
     IntroComponent,
@@ -130,6 +131,11 @@ import { ExpendituresComponent } from './fees/expenditures/expenditures.componen
     FeesHomeComponent,
     CheckoutComponent,
     ExpendituresComponent,
+    PersonalCarDriverHomeComponent,
+    PersonalCarDriverRequirementsComponent,
+    BecomeADriverHomeComponent,
+    BecomeADriverReqComponent,
+    PersonalCarDriverCarConditionComponent,
   ],
   imports: [
     CommonModule,
