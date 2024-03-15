@@ -7,7 +7,6 @@ import { InfoRoutingModule } from './info-routing.module';
 import { SendEmailFormComponent } from '../shared/send-email-form/send-email-form.component';
 
 import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
-import { FeesComponent } from './fees/fees.component';
 import { LegalComponent } from './legal/legal.component';
 import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-home-general-info';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
@@ -63,12 +62,15 @@ import { Art38Component } from './legal/chapters/chapter-7/art-38/art-38.compone
 import { Art39Component } from './legal/chapters/chapter-7/art-39/art-39.component';
 import { OutroComponent } from './legal/outro/outro.component';
 import { SubTitleComponent } from './legal/sub-title/sub-title.component';
+import { CommissionComponent } from './fees/commission/commission.component';
+import { FeesHomeComponent } from './fees/fees-home/fees-home.component';
+import { CheckoutComponent } from './fees/checkout/checkout.component';
+import { ExpendituresComponent } from './fees/expenditures/expenditures.component';
 
 
 @NgModule({
   declarations: [
     BecomeADriverComponent,
-    FeesComponent,
     LegalComponent,
     GeneralInfoComponent,
     FooterInfoHomeComponent,
@@ -124,6 +126,10 @@ import { SubTitleComponent } from './legal/sub-title/sub-title.component';
     Art39Component,
     OutroComponent,
     SubTitleComponent,
+    CommissionComponent,
+    FeesHomeComponent,
+    CheckoutComponent,
+    ExpendituresComponent,
   ],
   imports: [
     CommonModule,

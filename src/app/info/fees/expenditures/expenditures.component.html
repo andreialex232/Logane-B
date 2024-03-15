@@ -1,0 +1,35 @@
+<section>
+  <div class="pe-2 ps-2 pe-md-6 ps-md-6 pe-xl-9 ps-xl-9 mt-5">
+    <h2 class="h3 lh-base border-bottom border-secondary d-inline">
+      Cheltuieli
+    </h2>
+  </div>
+  <div class="pe-4 ps-4 pe-md-6 ps-md-6 pe-xl-10 ps-xl-10 mt-5 display-8 u-letter-spacing-1">
+    <ul class="list-unstyled">
+      <div 
+        class="d-flex align-items-center justify-content-start mt-4"
+        *ngFor="let cost of outgoings">
+        <span class="list-span text-white position-relative me-4">
+          {{ cost.number }}
+        </span>
+        <li class="text-start">
+          {{ cost.text }}
+        </li>
+      </div>
+    </ul>
+    <div class="mt-4">
+      <p>
+        Taxa include toate serviciile operaționale (contabilitate, casă de marcat, ecusoane, adeverințe salariat, protecția muncii, comisioane plați)
+      </p>
+      <p>
+        Contravaloarea copiei conforme si a ecusonului - 120 ron. Banii se vor scadea din prima lună de activitate a șoferului
+      </p>
+      <p>
+        Contractul de comodat pentru mașină (dacă este cazul) - 180 Ron
+      </p>
+      <p>
+        Impozit 19% ANAF
+      </p>
+    </div>
+  </div>
+</section>

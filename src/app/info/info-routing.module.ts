@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BecomeADriverComponent } from './become-a-driver/become-a-driver.component';
-import { FeesComponent } from './fees/fees.component';
 import { LegalComponent } from './legal/legal.component';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 import { PersonalCarDriverComponent } from './personal-car-driver/personal-car-driver.component';
+import { FeesHomeComponent } from './fees/fees-home/fees-home.component';
 
 const routes: Routes = [
   { path: '',
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   { path: 'venituri-cheltuieli-comisioane',
     title: 'Comisioane',
-    component: FeesComponent
+    component: FeesHomeComponent
   },
   { path: 'legal',
     title: 'OUG 49/2019',
