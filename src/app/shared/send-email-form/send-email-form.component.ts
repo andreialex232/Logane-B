@@ -21,6 +21,7 @@ export class SendEmailFormComponent {
     this.form = this.fb.group({
       name: new FormControl('', [Validators.required, Validators.pattern(/[a-z]/gi)]),
       email: new FormControl('', [Validators.required, Validators.email]),
+      personalCar: new FormControl('', [Validators.required, Validators.pattern(/^([^0-9]*)$/)]),
       tel: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]\d*$/)])
     })
   }
@@ -36,6 +37,10 @@ export class SendEmailFormComponent {
   get tel() {
     return this.form.get('tel') as FormControl;
   }
+
+  get personalCar() {
+    return this.form.get('personalCar') as FormControl;
+  } 
 
   submitForm(){
     this.attemptSubmit = true;

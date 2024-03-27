@@ -3,7 +3,6 @@
   class="needs-validation"
   action="https://formspree.io/f/mdoqgljr"
   method="POST"
-  novalidate
   aria-label="Contact Form"
   name="Contact Form"
   >
@@ -74,8 +73,8 @@
     </div>
   </div>
 
-  <div class="position-relative row mb-4 mb-lg-5">
-    <div class="col">
+  <div class="row mb-4 mb-lg-5">
+    <div class="col-12 col-lg-6 position-relative">
       <label 
         for="email" 
         class="form-label u-letter-spacing-1 fw-normal"
@@ -101,6 +100,34 @@
         </div>
         <div *ngIf="attemptSubmit && email?.errors!['email']">
           Introduceti un email valid
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 position-relative mt-4 mt-lg-0">
+      <label 
+        for="personalCar" 
+        class="form-label u-letter-spacing-1 fw-normal"
+        >Masina personala?
+        </label>
+      <input 
+        aria-required="true"
+        [ngClass]="{ 'is-invalid': attemptSubmit && personalCar.errors }"
+        [formControl]="personalCar"
+        name="personalCar"
+        type="text"
+        class="form-control u-letter-spacing-1" 
+        placeholder="Nu / Da, Toyota, 2022"
+        id="personalCar"
+        >
+      <div 
+        *ngIf="attemptSubmit && personalCar?.errors"
+        class="invalid-feedback position-absolute">
+        <div *ngIf="attemptSubmit && personalCar?.errors!['required']">
+          Campul trebuie completat
+        </div>
+        <div *ngIf="attemptSubmit && personalCar?.errors!['pattern']">
+          Campul nu poate contine numere
         </div>
       </div>
     </div>
