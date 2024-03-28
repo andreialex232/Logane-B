@@ -10,10 +10,5 @@ export const INFO_ARTICLES_PARTNERS: IArticles[] = [
     heading: 'Uber',
     text: 'Uber este o platformă globală de ride-hailing care conectează pasagerii cu șoferii prin intermediul unei aplicații mobile',
     link: 'https://www.uber.com/ro/ro/'
-  },
-  {
-    heading: 'Splash',
-    text: 'Splash este o platformă care oferă atât servicii de ride-hailing, cât și livrare de alimente',
-    link: 'https://ridesplash.com/'
   }
 ];

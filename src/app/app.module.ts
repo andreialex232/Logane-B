@@ -13,10 +13,9 @@ import { AboutModule } from './about/about.module';
 import { FooterModule } from './footer/footer.module';
 import { NavigationModule } from './navigation/navigation.module';
 
-
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

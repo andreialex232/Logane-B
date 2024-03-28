@@ -8,7 +8,7 @@ export const INFO_ARTICLES_GENERAL: IArticles[] = [
   },
   {
     heading: 'Venituri, cheltuieli si comisioane',
-    text: 'La ce venituri te poti astepta ca sofer partener',
+    text: 'Detalii referitoare la venit',
     link: 'venituri-cheltuieli-comisioane'
   },
   {
