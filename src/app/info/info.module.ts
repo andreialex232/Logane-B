@@ -10,7 +10,7 @@ import { LegalComponent } from './legal/legal.component';
 import { GeneralInfoComponent } from './footer-info/info-home-general-info/info-home-general-info';
 import { FooterInfoHomeComponent } from './footer-info/info-home/info-home.component';
 import { LegalInfoComponent } from './footer-info/info-home-legal-info/info-home-legal-info';
-import { PartnersComponent } from './footer-info/info-home-partners/info-home-partners';
+import { PartnersComponent } from './footer-info/info-home-partners/info-home-partners.component';
 import { Art12Component } from './legal/chapters/chapter-3/art-12/art-12.component';
 import { Art13Component } from './legal/chapters/chapter-3/art-13/art-13.component';
 import { IntroComponent } from './legal/intro/intro.component';

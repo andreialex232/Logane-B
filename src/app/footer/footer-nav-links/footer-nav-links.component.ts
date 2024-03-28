@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FOOTER_NAV_LINKS } from './footer-nav-models';
+import { FOOTER_NAV_LINKS } from '../../core/models/footer-models/footer-nav-models';
 
 @Component({
   selector: 'app-footer-nav-links',
