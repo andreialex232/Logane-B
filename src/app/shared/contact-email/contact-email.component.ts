@@ -16,9 +16,11 @@ export class ContactEmailComponent {
 
   handleSendEmail(event: string, currentModal: NgbActiveModal) {
     if(event === 'valid') {
-      currentModal.close();
-    }
-  }
+      setTimeout(() => {
+        currentModal.close();
+      }, 800);
+    };
+  };
   
 	openFormModal(content: TemplateRef<any>) {
     this.modalSvc.open(content, { size: 'lg', centered: true });

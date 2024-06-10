@@ -133,7 +133,7 @@
     </div>
   </div>
 
-  <div class="row mb-4 mb-lg-5">
+  <div class="row mb-4 mb-lg-4">
     <div class="col">
       <label 
         for="message" 
@@ -148,12 +148,20 @@
     </div>
   </div>
 
+<div 
+  class="text-success text-center position-relative"
+  *ngIf="message">
+  <div class="position-absolute top-50 start-50 translate-middle">
+    {{ message }}
+  </div>
+</div>
+
   <div class="text-center">
     <button 
       (click)="submitForm()"
       type="submit" 
       aria-label="Send Email"
-      class="btn btn-secondary btn-active btn-hover text-bg-primary fw-semibold">Trimite</button>
+      class="btn btn-secondary btn-active btn-hover text-bg-primary fw-semibold mt-4">Trimite</button>
   </div>
 
 </form>

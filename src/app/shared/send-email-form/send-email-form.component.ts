@@ -16,6 +16,7 @@ export class SendEmailFormComponent {
 
   public form: FormGroup;
   public attemptSubmit = false;
+  public message: string | undefined;
 
   constructor(private fb: FormBuilder, private elRef: ElementRef){
     this.form = this.fb.group({
@@ -40,15 +41,16 @@ export class SendEmailFormComponent {
 
   get personalCar() {
     return this.form.get('personalCar') as FormControl;
-  } 
+  }
 
   submitForm(){
     this.attemptSubmit = true;
     
     if(this.form.valid) {
+      this.message = 'Email trimis';
       this.sendEmail.emit('valid');
     } else {
       this.sendEmail.emit('invalid');
-    }
-  }
+    };
+  };
 };
