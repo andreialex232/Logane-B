@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SendEmailFormComponent } from './send-email-form.component';
 
 describe('SendEmailFormComponent', () => {

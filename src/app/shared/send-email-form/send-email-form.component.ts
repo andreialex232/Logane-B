@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-send-email-form',
@@ -16,14 +17,15 @@ export class SendEmailFormComponent {
 
   public form: FormGroup;
   public attemptSubmit = false;
-  public message: string | undefined;
+  public validationMessage: string | undefined;
 
   constructor(private fb: FormBuilder, private elRef: ElementRef){
     this.form = this.fb.group({
       name: new FormControl('', [Validators.required, Validators.pattern(/[a-z]/gi)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       personalCar: new FormControl('', [Validators.required, Validators.pattern(/^([^0-9]*)$/)]),
-      tel: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]\d*$/)])
+      tel: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]\d*$/)]),
+      message: new FormControl('')
     })
   }
 
@@ -43,14 +45,59 @@ export class SendEmailFormComponent {
     return this.form.get('personalCar') as FormControl;
   }
 
-  submitForm(){
-    this.attemptSubmit = true;
-    
-    if(this.form.valid) {
-      this.message = 'Email trimis';
-      this.sendEmail.emit('valid');
+  get message() {
+    return this.form.get('message') as FormControl;
+  }
+
+  createFormTemplate(): {} {
+    const emailTemplate = {
+      to_name: 'Catalin',
+      from_name: this.name.value,
+      from_telefon: this.tel.value,
+      from_email: this.email.value,
+      from_car: this.personalCar.value,
+      message: this.message.value
+    };
+    return emailTemplate;
+  };
+
+  resetValidationMessageText():void {
+    setTimeout(() => {
+      this.validationMessage = '';
+    }, 2000);
+  }
+  changeValidationMessage(status: string): void {
+    if(status === 'valid') {
+      this.validationMessage = 'Email trimis';
     } else {
-      this.sendEmail.emit('invalid');
+      this.validationMessage = 'Nu s-a putut trimite email. Incercati mai tarziu'
+    };
+    this.resetValidationMessageText();
+  };
+
+
+  async send() {
+    this.attemptSubmit = true;
+    if(this.form.valid) {
+      try {
+        await emailjs.send(
+          'service_1j1tzgq',
+          'template_h3szp34',
+          this.createFormTemplate(), {
+            publicKey: 'S4MDncS1his2ZL4k4',
+          },
+        );
+        this.changeValidationMessage('valid');
+        this.sendEmail.emit('valid');
+      } catch (err) {
+        if(err instanceof EmailJSResponseStatus) {
+          console.error('Failed to send email', err);
+          this.changeValidationMessage('invalid');
+        };
+      };
     };
   };
-};
+
+
+  
+}

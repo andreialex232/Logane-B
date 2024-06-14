@@ -1,12 +1,9 @@
 <form 
   [formGroup]="form"
   class="needs-validation"
-  action="https://formspree.io/f/mdoqgljr"
-  method="POST"
   aria-label="Contact Form"
   name="Contact Form"
   >
-
   <div class="row mb-4">
     <div class="col-12 col-lg-6 position-relative">
       <label 
@@ -141,6 +138,7 @@
         Mesaj
       </label>
       <textarea 
+        [formControl]="message"
         class="form-control u-letter-spacing-1"
         placeholder="Va contactez cu dorinta de..." 
         id="message"
@@ -149,19 +147,20 @@
   </div>
 
 <div 
-  class="text-success text-center position-relative"
-  *ngIf="message">
+  class="text-center position-relative"
+  *ngIf="validationMessage">
   <div class="position-absolute top-50 start-50 translate-middle">
-    {{ message }}
+    {{ validationMessage }}
   </div>
 </div>
 
   <div class="text-center">
     <button 
-      (click)="submitForm()"
+      (click)="send()"
       type="submit" 
       aria-label="Send Email"
-      class="btn btn-secondary btn-active btn-hover text-bg-primary fw-semibold mt-4">Trimite</button>
+      class="btn btn-secondary btn-active btn-hover text-bg-primary fw-semibold mt-4">Trimite
+    </button>
   </div>
 
 </form>
