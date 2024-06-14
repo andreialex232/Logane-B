@@ -1,1 +1,1 @@
-export const TEL_NUMBER: string = '0745235622';
+export const TEL_NUMBER: string = '0760957314';
