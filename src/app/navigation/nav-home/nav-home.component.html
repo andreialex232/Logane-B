@@ -2,13 +2,12 @@
   <div class="container-fluid pe-lg-6 ps-lg-6 pe-1 ps-1 align-items-center justify-content-center">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="user-select-none mb-2 mb-lg-0">
-        <!-- <a --> 
-          <!-- routerLink="" --> 
-          <!-- class="navbar-brand d-flex p-0"> -->
+        <a 
+          routerLink="" 
+          class="navbar-brand d-flex p-0">
           <!-- <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40"> -->
-          <!-- <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo"> -->
-          <!-- Logane -->
-        <!-- </a> -->
+          <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo">
+        </a>
       </div>
       <button
         (click)="toggleCollapse()"
@@ -74,11 +73,12 @@
             (mouseover)="myDrop.open()"
             (mouseleave)="myDrop.close()"
             >
+            <!-- Big screen button -->
             <button
               type="button"
-              class="caret-off nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black"
+              class="caret-off btn-link-nav nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black d-none d-lg-block"
               id="dropdown"
-              ngbDropdownToggle
+              ngbDropdownAnchor
               (focus)="myDrop.open()">
               <div class="d-flex justify-content-center align-items-center gap-1">
                 Informatii
@@ -89,6 +89,25 @@
                   alt="Chevron pointing down">
               </div>
             </button>
+
+            <!-- Mobile button -->
+            <button
+            type="button"
+            class="caret-off btn-link-nav nav-link pe-0 ps-0 pb-1 me-2 text-black d-lg-none"
+            id="dropdown"
+            ngbDropdownToggle
+            (focus)="myDrop.open()">
+            <div class="d-flex justify-content-center align-items-center gap-1">
+              Informatii
+              <img 
+                [ngClass]="{ 'chevron-down-rotate': myDrop.isOpen() }"
+                class="chevron-down-size"
+                src="assets/svg/chevron-down.svg"
+                alt="Chevron pointing down">
+            </div>
+          </button>
+
+
             <ul
               ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
