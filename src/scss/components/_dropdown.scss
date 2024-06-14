@@ -3,11 +3,7 @@ $dropdown-padding-x: $drop-padding-x;
 $dropdown-padding-y: $drop-padding-y;
 
 .dropdown-menu {
-  width: 230px !important;
-
-  @include media-breakpoint-up(sm) {
-    width: 300px !important;
-  }
+  width: 300px !important;
 }
 
 .dropdown-toggle:focus {
