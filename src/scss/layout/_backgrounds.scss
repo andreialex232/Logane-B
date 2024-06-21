@@ -24,6 +24,7 @@
   background-size: contain;
   width: 700px;
   height: 460px;
+  margin-top: -128px;
 
   @include media-breakpoint-up(lg) {
     background-image: url(../../assets/images/about-us-hero-lg.jpg);
@@ -31,6 +32,19 @@
 
   @include media-breakpoint-up(xl){
     background-image: url(../../assets/images/about-us-hero-xxl.jpg)
+  }
+
+  @media (max-height: 900px) {
+    margin-top: -90px;
+  }
+  @media (max-height: 700px) {
+    margin-top: -60px;
+  }
+  @media (max-height: 520px) {
+    margin-top: -33px;
+  }
+  @media (max-height: 400px) {
+    margin-top: 0px;
   }
 }
 
@@ -64,4 +78,29 @@
 
 .information-bg {
   background-image: linear-gradient(to bottom right, $secondary, $primary);
+}
+
+.negative-margin-contact {
+  margin-top: -128px;
+  @media (max-height: 700px) {
+    margin-top: -66px;
+  }
+  @media (max-height: 520px) {
+    margin-top: -33px;
+  }
+  @media (max-height: 400px) {
+    margin-top: -16px;
+  }
+  @media (max-height: 350px) {
+    margin-top: 0px;
+  }
+}
+
+.h1-about {
+  @media (max-height: 700px) {
+    transform: translateY(-40px);
+  }
+  @media (max-height: 275px) {
+    transform: translateY(-50px);
+  }
 }
