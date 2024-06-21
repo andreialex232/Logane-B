@@ -5,7 +5,7 @@ export const INFO_ARTICLES_LEGAL: IArticles[] = [
   {
     heading: 'OUG 49/2019',
     text: 'Ce spune ordonanta de urgenta despre ridesharing',
-    link: 'informatii/sofer-partener-cu-masina-personala'
+    link: 'informatii/legal'
   },
   {
     heading: 'Cum devin sofer partener',
@@ -23,7 +23,7 @@ export const INFO_ARTICLES_LEGAL_2: IArticles[] = [
   {
     heading: 'OUG 49/2019',
     text: 'Ce spune ordonanta de urgenta despre ridesharing',
-    link: 'sofer-partener-cu-masina-personala'
+    link: 'legal'
   },
   {
     heading: 'Cum devin sofer partener',
