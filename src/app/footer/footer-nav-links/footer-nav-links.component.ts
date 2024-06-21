@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FOOTER_NAV_LINKS } from '../../core/models/footer-models/footer-nav-models';
 
 @Component({
   selector: 'app-footer-nav-links',
@@ -8,5 +7,4 @@ import { FOOTER_NAV_LINKS } from '../../core/models/footer-models/footer-nav-mod
 })
 export class FooterNavLinksComponent {
 
-  public footerNavLinks = FOOTER_NAV_LINKS;
 }

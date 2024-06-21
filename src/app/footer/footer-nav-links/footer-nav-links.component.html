@@ -4,13 +4,27 @@
   </h2>
   <menu class="navbar flex-column list-unstyled mb-0 mt-0">
     <li 
-      class="mb-1"
-      *ngFor="let navItem of footerNavLinks">
+      class="mb-1">
       <a 
-        class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer"
-        routerLink="{{ navItem.link }}">
-        {{ navItem.heading }}
+        class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer ga-4-acasa"
+        routerLink="/">
+        Acasa
       </a>
+      <a 
+      class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer ga-4-despre-noi"
+      routerLink="despre-noi">
+      Despre noi
+    </a>
+    <a 
+      class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer ga-4-info"
+      routerLink="informatii">
+      Informatii
+    </a>
+    <a 
+      class="nav-link pe-0 ps-0 pb-1 text-white text-decoration-none btn-link-footer ga-4-contact"
+      routerLink="contact">
+      Contact
+    </a>
     </li>
   </menu>
 </div>

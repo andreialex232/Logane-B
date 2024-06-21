@@ -4,7 +4,7 @@
       <div class="user-select-none mb-2 mb-lg-0">
         <a 
           routerLink="" 
-          class="navbar-brand d-flex p-0">
+          class="navbar-brand d-flex p-0 ga-4-acasa">
           <!-- <img src="../assets/svg/car-sport.svg" class="me-n3 navbar-logo" alt="CPM Company Logo" width="40"> -->
           <img src="../assets/images/cpmlogo.png" class="me-n3 navbar-logo custom-logo" alt="CPM Company Logo">
         </a>
@@ -56,14 +56,14 @@
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="''" 
-            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Acasa</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black ga-4-acasa">Acasa</a>
         </li>
         <li 
           class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="'despre-noi'"
-            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Despre noi</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black ga-4-despre-noi">Despre noi</a>
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <div 
@@ -106,8 +106,6 @@
                 alt="Chevron pointing down">
             </div>
           </button>
-
-
             <ul
               ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
@@ -117,7 +115,7 @@
                   ngbDropdownItem
                   (click)="onClickMenuItem()"
                   routerLink="{{dropItem.link}}"
-                  class="nav-link dropdown-menu-link text-black">{{ dropItem.name }}</a>
+                  class="nav-link dropdown-menu-link text-black ga-4-info">{{ dropItem.name }}</a>
               </li>
             </ul>
           </div>
@@ -127,7 +125,7 @@
           <a 
             (click)="onClickMenuItem()"
             [routerLink]="'contact'"  
-            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black">Contact</a>
+            class="nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black ga-4-contact">Contact</a>
         </li>
         <li class="nav-item">
           <a 
