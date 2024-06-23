@@ -67,7 +67,7 @@
         </li>
         <li class="nav-item pe-lg-4 pb-1 pb-lg-0">
           <div 
-            class="d-inline-block d-flex justify-content-center align-items-center flex-column" 
+            class="d-inline-block d-flex justify-content-center align-items-center flex-column d-none d-lg-block" 
             ngbDropdown 
             #myDrop="ngbDropdown"
             (mouseover)="myDrop.open()"
@@ -76,7 +76,7 @@
             <!-- Big screen button -->
             <button
               type="button"
-              class="caret-off btn-link-nav nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black d-none d-lg-block"
+              class="caret-off btn-link-nav nav-link btn-link-nav pe-0 ps-0 pb-1 me-2 text-black "
               id="dropdown"
               ngbDropdownAnchor
               (focus)="myDrop.open()">
@@ -89,6 +89,19 @@
                   alt="Chevron pointing down">
               </div>
             </button>
+            <ul
+              ngbDropdownMenu
+              class="dropdown-menu text-center m-auto">
+              <li
+                *ngFor="let dropItem of dropdownItems">
+                <a
+                  ngbDropdownItem
+                  (click)="onClickMenuItem()"
+                  routerLink="{{dropItem.link}}"
+                  class="nav-link dropdown-menu-link text-black ga-4-info">{{ dropItem.name }}</a>
+              </li>
+            </ul>
+          </div>
 
             <!-- Mobile button -->
           <!-- <button
@@ -107,46 +120,36 @@
             </div>
           </button> -->
 
-          <button 
-            class="caret-off btn-link-nav nav-link pe-0 ps-0 pb-1 me-2 text-black d-lg-none"
-            (click)="mobileInfoCollapse()"
-            type="button"
-            aria-label="Toggle Information Navigation"
-            [attr.aria-expanded]="!infoCollapse">
-            Informatii
-            <img
-              [ngClass]="{ 'chevron-down-rotate': infoCollapse }"
-              class="chevron-down-size"
-              src="assets/svg/chevron-down.svg"
-              alt="Chevron pointing down">
-          </button>
-          <ul 
-            [ngbCollapse]="infoCollapse"
-            class="text-center m-auto list-unstyled">
-            <li
-              *ngFor="let dropItem of dropdownItems">
-              <a 
-                routerLink="{{ dropItem.link }}"
-                (click)="onClickMenuItem()"
-                class="nav-link dropdown-menu-link text-black ga-4-info">
-                {{ dropItem.name }}
-              </a>
-            </li>
-          </ul>
 
-
-            <!-- <ul
-              ngbDropdownMenu
-              class="dropdown-menu text-center m-auto">
+          <!-- Collapse Mobile -->
+          <div
+            class="d-inline-block d-flex justify-content-center align-items-center flex-column d-lg-none">
+            <button 
+              class="caret-off btn-link-nav nav-link pe-0 ps-0 pb-1 me-2 text-black"
+              (click)="mobileInfoCollapse()"
+              type="button"
+              aria-label="Toggle Information Navigation"
+              [attr.aria-expanded]="!infoCollapse">
+              Informatii
+              <img
+                [ngClass]="{ 'chevron-down-rotate': infoCollapse }"
+                class="chevron-down-size"
+                src="assets/svg/chevron-down.svg"
+                alt="Chevron pointing down">
+            </button>
+            <ul 
+              [ngbCollapse]="infoCollapse"
+              class="text-center m-auto list-unstyled">
               <li
                 *ngFor="let dropItem of dropdownItems">
-                <a
-                  ngbDropdownItem
+                <a 
+                  routerLink="{{ dropItem.link }}"
                   (click)="onClickMenuItem()"
-                  routerLink="{{dropItem.link}}"
-                  class="nav-link dropdown-menu-link text-black ga-4-info">{{ dropItem.name }}</a>
+                  class="nav-link dropdown-menu-link text-black ga-4-info">
+                  {{ dropItem.name }}
+                </a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </li>
         <li
