@@ -1,7 +1,4 @@
-export interface INavDropdown {
-  name: string;
-  link: string;
-}
+import { INavDropdown } from "../../interfaces/nav-items"
 
 export const INavDropdownItems: INavDropdown[] = [
   {

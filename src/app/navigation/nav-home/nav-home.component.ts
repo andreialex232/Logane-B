@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TEL_NUMBER } from 'src/app/core/constants/tel-number.constants';
-import { INavDropdownItems } from './nav-dropdown-items.models';
+import { INavDropdownItems } from 'src/app/core/models/nav-models/nav-items.models';
 
 @Component({
   selector: 'app-nav-home',
@@ -13,6 +13,7 @@ export class NavHomeComponent {
   public isMenuCollapsed = true;
   public userOpenedMenu = false;
   public dropdownItems = INavDropdownItems;
+  public infoCollapse = true;
 
   constructor(){}
 
@@ -23,5 +24,9 @@ export class NavHomeComponent {
   public toggleCollapse(){
     this.isMenuCollapsed = !this.isMenuCollapsed;
     this.userOpenedMenu = true;
+  }
+
+  public mobileInfoCollapse() {
+    this.infoCollapse = !this.infoCollapse;
   }
 }

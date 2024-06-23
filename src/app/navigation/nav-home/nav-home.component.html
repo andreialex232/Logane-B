@@ -91,7 +91,7 @@
             </button>
 
             <!-- Mobile button -->
-            <button
+          <!-- <button
             type="button"
             class="caret-off btn-link-nav nav-link pe-0 ps-0 pb-1 me-2 text-black d-lg-none"
             id="dropdown"
@@ -105,8 +105,37 @@
                 src="assets/svg/chevron-down.svg"
                 alt="Chevron pointing down">
             </div>
+          </button> -->
+
+          <button 
+            class="caret-off btn-link-nav nav-link pe-0 ps-0 pb-1 me-2 text-black d-lg-none"
+            (click)="mobileInfoCollapse()"
+            type="button"
+            aria-label="Toggle Information Navigation"
+            [attr.aria-expanded]="!infoCollapse">
+            Informatii
+            <img
+              [ngClass]="{ 'chevron-down-rotate': infoCollapse }"
+              class="chevron-down-size"
+              src="assets/svg/chevron-down.svg"
+              alt="Chevron pointing down">
           </button>
-            <ul
+          <ul 
+            [ngbCollapse]="infoCollapse"
+            class="text-center m-auto list-unstyled">
+            <li
+              *ngFor="let dropItem of dropdownItems">
+              <a 
+                routerLink="{{ dropItem.link }}"
+                (click)="onClickMenuItem()"
+                class="nav-link dropdown-menu-link text-black ga-4-info">
+                {{ dropItem.name }}
+              </a>
+            </li>
+          </ul>
+
+
+            <!-- <ul
               ngbDropdownMenu
               class="dropdown-menu text-center m-auto">
               <li
@@ -117,7 +146,7 @@
                   routerLink="{{dropItem.link}}"
                   class="nav-link dropdown-menu-link text-black ga-4-info">{{ dropItem.name }}</a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </li>
         <li
