@@ -6,23 +6,23 @@ import { NotFoundHomeComponent } from './not-found/not-found-home/not-found-home
 
 const routes: Routes = [
   { path: '',
-    title: 'Acasa',
+    title: 'C.P.M Rent Solutions - Acasa',
     component: LandingPageComponent
   },
   { path: 'contact',
-    title: 'Contact',
+    title: 'C.P.M Rent Solutions - Contact',
     component: ContactHomeComponent
   },
   { path: 'despre-noi',
-    title: 'Despre noi', 
+    title: 'C.P.M Rent Solutions - Despre noi', 
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
   { path: 'informatii', 
-    title: 'Informatii utile',
+    title: 'C.P.M Rent Solutions - Informatii utile',
     loadChildren: () => import('./info/info.module').then(m => m.InfoModule)
   },
   { path: '404',
-    title: 'Pagina nu a fost gasita', 
+    title: 'C.P.M Rent Solutions - Pagina nu a fost gasita', 
     component: NotFoundHomeComponent
   },
   { path: '**',
