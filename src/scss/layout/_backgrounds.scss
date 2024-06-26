@@ -80,27 +80,8 @@
   background-image: linear-gradient(to bottom right, $secondary, $primary);
 }
 
-/* .negative-margin-contact {
-  margin-top: -128px;
-  @media (max-height: 700px) {
-    margin-top: -66px;
+.negative-margin-contact {
+  @media (min-height: 700px) and (min-width: 992px) {
+    margin-top: -128px;
   }
-  @media (max-height: 520px) {
-    margin-top: -33px;
-  }
-  @media (max-height: 400px) {
-    margin-top: -16px;
-  }
-  @media (max-height: 350px) {
-    margin-top: 0px;
-  }
-} */
-/* 
-.h1-about {
-  @media (max-height: 700px) {
-    transform: translateY(-40px);
-  }
-  @media (max-height: 275px) {
-    transform: translateY(-50px);
-  }
-} */
+}
